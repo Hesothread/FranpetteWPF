@@ -1,0 +1,15 @@
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\bin\Debug\FranpetteWPF.exe.config
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\bin\Debug\FranpetteWPF.exe
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\bin\Debug\FranpetteWPF.pdb
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.csprojAssemblyReference.cache
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\App.g.cs
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF_MarkupCompile.cache
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF_MarkupCompile.lref
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\MainWindow.baml
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.g.resources
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.Properties.Resources.resources
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.csproj.GenerateResource.cache
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.csproj.CoreCompileInputs.cache
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.exe
+C:\Users\Famille\Documents\GitHub\FranpetteWPF\FranpetteWPF\obj\Debug\FranpetteWPF.pdb
