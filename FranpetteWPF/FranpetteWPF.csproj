@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ressources\Lang.Designer.cs" />
+    <Compile Include="Ressources\Lang.en-US.Designer.cs" />
+    <Compile Include="Ressources\Lang.es.Designer.cs" />
+    <Compile Include="Ressources\Lang.fr.Designer.cs" />
     <Page Include="Franpette\Franpette.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +79,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Managers\Core\Core.cs" />
+    <Compile Include="Managers\Network\IFranpetteNetwork.cs" />
+    <Compile Include="Managers\Network\NetworkFTP.cs" />
+    <Compile Include="Managers\Serialisation\ISerialisation.cs" />
+    <Compile Include="Managers\Serialisation\XMLInfoSerialisation.cs" />
+    <Compile Include="Managers\Tools\Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -92,6 +102,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ressources\Lang.en-US.resx" />
+    <EmbeddedResource Include="Ressources\Lang.es.resx" />
+    <EmbeddedResource Include="Ressources\Lang.fr.resx" />
+    <EmbeddedResource Include="Ressources\Lang.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,8 +117,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Login\" />
-    <Folder Include="Managers\NewFolder1\" />
     <Folder Include="Options\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\franpette-logo.png" />
+    <Resource Include="Ressources\franpette.ico" />
+    <Resource Include="Ressources\franpette.png" />
+    <Content Include="Ressources\franpette.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
