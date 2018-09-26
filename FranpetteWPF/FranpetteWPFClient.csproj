@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Managers\Network\NetworkClient.cs" />
     <Compile Include="Ressources\Lang.Designer.cs" />
     <Compile Include="Ressources\Lang.en-US.Designer.cs" />
     <Compile Include="Ressources\Lang.es.Designer.cs" />
