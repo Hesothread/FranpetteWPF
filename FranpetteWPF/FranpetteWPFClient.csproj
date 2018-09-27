@@ -62,53 +62,53 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Franpette\Franpette.xaml.cs">
+    <Compile Include="FranpetteWindow\Franpette.xaml.cs">
       <DependentUpon>Franpette.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Franpette\Home\CAccount\CAccount.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\BottomBar\BBar.xaml.cs">
+      <DependentUpon>BBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FranpetteWindow\HomeControls\BottomBar\BBarDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterAccount\CAccount.xaml.cs">
       <DependentUpon>CAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\CAccount\CAccountDataContext.cs" />
-    <Compile Include="Franpette\Home\CNews\CNews.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\CenterAccount\CAccountDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterNews\CNews.xaml.cs">
       <DependentUpon>CNews.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\CNews\CNewsAdmin.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\CenterNews\CNewsAdmin.xaml.cs">
       <DependentUpon>CNewsAdmin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\CNews\CNewsDataContext.cs" />
-    <Compile Include="Franpette\Home\COptions\COptions.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\CenterNews\CNewsDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterOptions\COptions.xaml.cs">
       <DependentUpon>COptions.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\COptions\COptionsDataContext.cs" />
-    <Compile Include="Franpette\Home\COptions\OAdmin\OAdmin.xaml.cs">
-      <DependentUpon>OAdmin.xaml</DependentUpon>
+    <Compile Include="FranpetteWindow\HomeControls\CenterOptions\COptionsDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterAdmin\CAdmin.xaml.cs">
+      <DependentUpon>CAdmin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\COptions\OAdmin\OAdminDataContext.cs" />
-    <Compile Include="Franpette\Home\COptions\OOptions\OOptions.xaml.cs">
-      <DependentUpon>OOptions.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Franpette\Home\COptions\OOptions\OOptionsDataContext.cs" />
-    <Compile Include="Franpette\Home\CServerList\CServerList.cs" />
-    <Compile Include="Franpette\Home\CServerList\CServerList.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\CenterAdmin\CAdminDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerListDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerList.xaml.cs">
       <DependentUpon>CServerList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\Home.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\HomeDataContext.cs" />
-    <Compile Include="Franpette\Home\RFriends\RFriends.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\HomeDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriends.xaml.cs">
       <DependentUpon>RFriends.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\RFriends\RFriendsDataContext.cs" />
-    <Compile Include="Franpette\Home\TBar\TBar.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriendsDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\TopBar\TBar.xaml.cs">
       <DependentUpon>TBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Home\TBar\TBarDataContext.cs" />
-    <Compile Include="Franpette\Login\Login.xaml.cs">
+    <Compile Include="FranpetteWindow\HomeControls\TopBar\TBarDataContext.cs" />
+    <Compile Include="FranpetteWindow\LoginControls\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Franpette\Login\LoginDataContext.cs" />
+    <Compile Include="FranpetteWindow\LoginControls\LoginDataContext.cs" />
     <Compile Include="Managers\Network\NetworkClient.cs" />
     <Compile Include="Ressources\Lang.Designer.cs" />
     <Compile Include="Ressources\Lang.en-US.Designer.cs" />
@@ -118,7 +118,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Franpette\FranpetteDataContext.cs" />
+    <Compile Include="FranpetteWindow\FranpetteDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\Core\Core.cs" />
@@ -158,8 +158,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Franpette\Home\RFriends\FChat\" />
-    <Folder Include="Franpette\Home\RFriends\FriendsList\" />
+    <Folder Include="FranpetteWindow\HomeControls\RightFriends\FChat\" />
+    <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Ressources\franpette-logo.png" />
@@ -168,51 +168,51 @@
     <Content Include="Ressources\franpette.svg" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Franpette\Franpette.xaml">
+    <Page Include="FranpetteWindow\Franpette.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
-    <Page Include="Franpette\Home\CAccount\CAccount.xaml">
+    <Page Include="FranpetteWindow\HomeControls\BottomBar\BBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\CNews\CNews.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterAccount\CAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\CNews\CNewsAdmin.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterNews\CNews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\COptions\COptions.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterNews\CNewsAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\COptions\OAdmin\OAdmin.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterOptions\COptions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\COptions\OOptions\OOptions.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Franpette\Home\CServerList\CServerList.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterAdmin\CAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\Home.xaml">
+    <Page Include="FranpetteWindow\HomeControls\CenterServerList\CServerList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\RFriends\RFriends.xaml">
+    <Page Include="FranpetteWindow\HomeControls\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Home\TBar\TBar.xaml">
+    <Page Include="FranpetteWindow\HomeControls\RightFriends\RFriends.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Franpette\Login\Login.xaml">
+    <Page Include="FranpetteWindow\HomeControls\TopBar\TBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FranpetteWindow\LoginControls\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

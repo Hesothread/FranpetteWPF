@@ -15,11 +15,11 @@ namespace Franpette.Sources.Franpette
         private Dictionary<EInfo, String>   _data;
         private Boolean                     _minecraftUpdated = false;
 
-        public Core(Label progress_label)
+        public Core()
         {
             _data = new Dictionary<EInfo, String>();
             _serialisation = new XMLInfoSerialisation();
-            _network = new NetworkFTP(progress_label);
+            _network = new NetworkFTP();
         }
 
         internal  Dictionary<EInfo, String> getData()

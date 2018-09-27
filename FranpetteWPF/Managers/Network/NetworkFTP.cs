@@ -27,15 +27,12 @@ namespace Franpette.Sources
         private ResourceManager _resMan;
         private CultureInfo     _cul;
 
-        public NetworkFTP(Label progress_label)
+        public NetworkFTP()
         {
             _sw = new Stopwatch();
-            _progress = progress_label;
+            _progress = null; //ToDo
             _font = new Font("Lucida Sans Unicode", 9F, FontStyle.Regular);
             _textPos = new PointF(0, 0);
-
-            _resMan = new ResourceManager("Franpette.Resources.Lang", typeof(Program).Assembly);
-            _cul = CultureInfo.CreateSpecificCulture(Utils.getProperty("lang", "en-US"));
         }
 
         public Boolean connect(string address)
