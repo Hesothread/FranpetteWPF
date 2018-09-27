@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FranpetteWPF.Franpette
+namespace FranpetteWPF.Franpette.Home.CServerList
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour CServerList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CServerList : UserControl
     {
-        private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
-
-        public MainWindow()
+        public CServerList()
         {
             InitializeComponent();
-            DataContext = _franpetteContext;
         }
-
     }
 }

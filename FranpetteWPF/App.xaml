@@ -2,8 +2,17 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:FranpetteWPF"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              StartupUri="Windows/Franpette/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            
+            <system:String x:Key="lang_localizedMessage">en-US Message</system:String>
+            <system:String x:Key="lang_remember">Remember</system:String>
+            <system:String x:Key="lang_username">Username</system:String>
+            <system:String x:Key="lang_password">Password</system:String>
+            <system:String x:Key="lang_server_ip_or_domaine">Server IP or domaine</system:String>
+            <system:String x:Key="lang_login_in">Log in</system:String>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

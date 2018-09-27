@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FranpetteWPF.Franpette
+namespace FranpetteWPF.Franpette.Login
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : UserControl
     {
-        private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
-
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
-            DataContext = _franpetteContext;
         }
-
     }
 }

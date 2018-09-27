@@ -42,6 +42,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,24 +62,63 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Franpette\Franpette.xaml.cs">
+      <DependentUpon>Franpette.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Franpette\Home\CAccount\CAccount.xaml.cs">
+      <DependentUpon>CAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\CAccount\CAccountDataContext.cs" />
+    <Compile Include="Franpette\Home\CNews\CNews.xaml.cs">
+      <DependentUpon>CNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\CNews\CNewsAdmin.xaml.cs">
+      <DependentUpon>CNewsAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\CNews\CNewsDataContext.cs" />
+    <Compile Include="Franpette\Home\COptions\COptions.xaml.cs">
+      <DependentUpon>COptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\COptions\COptionsDataContext.cs" />
+    <Compile Include="Franpette\Home\COptions\OAdmin\OAdmin.xaml.cs">
+      <DependentUpon>OAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\COptions\OAdmin\OAdminDataContext.cs" />
+    <Compile Include="Franpette\Home\COptions\OOptions\OOptions.xaml.cs">
+      <DependentUpon>OOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\COptions\OOptions\OOptionsDataContext.cs" />
+    <Compile Include="Franpette\Home\CServerList\CServerList.cs" />
+    <Compile Include="Franpette\Home\CServerList\CServerList.xaml.cs">
+      <DependentUpon>CServerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\HomeDataContext.cs" />
+    <Compile Include="Franpette\Home\RFriends\RFriends.xaml.cs">
+      <DependentUpon>RFriends.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\RFriends\RFriendsDataContext.cs" />
+    <Compile Include="Franpette\Home\TBar\TBar.xaml.cs">
+      <DependentUpon>TBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Home\TBar\TBarDataContext.cs" />
+    <Compile Include="Franpette\Login\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Franpette\Login\LoginDataContext.cs" />
     <Compile Include="Managers\Network\NetworkClient.cs" />
     <Compile Include="Ressources\Lang.Designer.cs" />
     <Compile Include="Ressources\Lang.en-US.Designer.cs" />
     <Compile Include="Ressources\Lang.es.Designer.cs" />
     <Compile Include="Ressources\Lang.fr.Designer.cs" />
-    <Page Include="Franpette\Franpette.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Franpette\FranpetteDataContext.cs" />
-    <Compile Include="Franpette\Franpette.xaml.cs">
-      <DependentUpon>Franpette.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\Core\Core.cs" />
@@ -117,14 +158,64 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Login\" />
-    <Folder Include="Options\" />
+    <Folder Include="Franpette\Home\RFriends\FChat\" />
+    <Folder Include="Franpette\Home\RFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Ressources\franpette-logo.png" />
     <Resource Include="Ressources\franpette.ico" />
     <Resource Include="Ressources\franpette.png" />
     <Content Include="Ressources\franpette.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Franpette\Franpette.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Franpette\Home\CAccount\CAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\CNews\CNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\CNews\CNewsAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\COptions\COptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\COptions\OAdmin\OAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\COptions\OOptions\OOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Franpette\Home\CServerList\CServerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\RFriends\RFriends.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Home\TBar\TBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Franpette\Login\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

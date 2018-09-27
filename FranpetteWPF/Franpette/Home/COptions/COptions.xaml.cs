@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FranpetteWPF.Franpette
+namespace FranpetteWPF.Franpette.Home.COptions
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour COptions.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class COptions : UserControl
     {
-        private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
-
-        public MainWindow()
+        public COptions()
         {
             InitializeComponent();
-            DataContext = _franpetteContext;
         }
-
     }
 }

@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FranpetteWPF.Franpette
+namespace FranpetteWPF.Franpette.Home.CNews
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour CNews.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CNews : UserControl
     {
-        private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
-
-        public MainWindow()
+        public CNews()
         {
             InitializeComponent();
-            DataContext = _franpetteContext;
         }
-
     }
 }

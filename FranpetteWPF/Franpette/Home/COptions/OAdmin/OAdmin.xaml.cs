@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FranpetteWPF.Franpette
+namespace FranpetteWPF.Franpette.Home.COptions.OAdmin
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour OAdmin.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OAdmin : UserControl
     {
-        private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
-
-        public MainWindow()
+        public OAdmin()
         {
             InitializeComponent();
-            DataContext = _franpetteContext;
         }
-
     }
 }
