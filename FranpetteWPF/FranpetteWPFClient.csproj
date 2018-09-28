@@ -89,9 +89,15 @@
       <DependentUpon>CAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="FranpetteWindow\HomeControls\CenterAdmin\CAdminDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerListAdmin.xaml.cs">
+      <DependentUpon>CServerListAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerListDataContext.cs" />
     <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerList.xaml.cs">
       <DependentUpon>CServerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerListFilter.xaml.cs">
+      <DependentUpon>CServerListFilter.xaml</DependentUpon>
     </Compile>
     <Compile Include="FranpetteWindow\HomeControls\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -197,6 +203,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FranpetteWindow\HomeControls\CenterServerList\CServerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FranpetteWindow\HomeControls\CenterServerList\CServerListAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FranpetteWindow\HomeControls\CenterServerList\CServerListFilter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
