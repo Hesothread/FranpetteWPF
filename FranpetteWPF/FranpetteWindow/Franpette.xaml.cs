@@ -33,17 +33,19 @@ namespace FranpetteWPF.FranpetteWindow
             DataContext = _franpetteContext;
         }
 
-        private void OnLoginAccepted()
-        {
-            _home = new Home();
-            _franpetteContext.MainWindow = _home;
-        }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             _login = new Login();
             _login.MyPersonalizedUCEvent += OnLoginAccepted;
             _franpetteContext.MainWindow = _login;
+        }
+
+
+        //EventHandler
+        private void OnLoginAccepted()
+        {
+            _home = new Home();
+            _franpetteContext.MainWindow = _home;
         }
     }
 }

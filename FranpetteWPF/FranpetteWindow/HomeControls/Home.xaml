@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:BottomBar="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.BottomBar"
+             xmlns:RightFriends="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.RightFriends"
+             xmlns:TopBar="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.TopBar"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1300">
+             d:DesignHeight="700" d:DesignWidth="1300" Loaded="UserControl_Loaded">
     <Grid>
-        <Label x:Name="label" Content="Mon penis est gigantesque" HorizontalAlignment="Left" Margin="169,267,0,0" VerticalAlignment="Top" Height="241" Width="1058" FontSize="72"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
 
+        <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100" />
+        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding CenterMenu}" />
+        <RightFriends:RFriends  Grid.Row="1" Grid.Column="1" MaxWidth="200"/>
+        <BottomBar:BBar  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>
 </UserControl>

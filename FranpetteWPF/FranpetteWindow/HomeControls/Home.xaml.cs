@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FranpetteWPF.FranpetteWindow.HomeControls.CenterNews;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
     /// </summary>
     public partial class Home : UserControl
     {
+        private HomeDataContext _homeContext;
+
         public Home()
         {
             InitializeComponent();
+            _homeContext = new HomeDataContext();
+            DataContext = _homeContext;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            _homeContext.CenterMenu = new CNews();
         }
     }
 }
