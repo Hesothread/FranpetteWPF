@@ -20,9 +20,13 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.BottomBar
     /// </summary>
     public partial class BBar : UserControl
     {
+        private BBarDataContext _bottomBarContext;
+
         public BBar()
         {
             InitializeComponent();
+            _bottomBarContext = new BBarDataContext();
+            this.DataContext = _bottomBarContext;
         }
     }
 }

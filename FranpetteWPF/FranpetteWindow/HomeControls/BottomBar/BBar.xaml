@@ -5,18 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="BottomButton" TargetType="TextBlock">
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        <Style x:Key="LeftButton" TargetType="TextBlock" BasedOn="{StaticResource BottomButton}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="RightButton" TargetType="TextBlock" BasedOn="{StaticResource BottomButton}">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="LightGreen"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid Name="BBarGrid" Background="Black">
-        <TextBlock Text="3.0.1" VerticalAlignment="Center" Margin="8,0,0,0" Cursor="Hand">
-            <TextBlock.Style>
-                <Style TargetType="TextBlock">
-                    <Setter Property="Foreground" Value="Gray"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="White"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
+        <TextBlock Style="{StaticResource LeftButton}" Text="{Binding CurrentVersion}"/>
+        <TextBlock Style="{StaticResource RightButton}" Text="Synchroniser"/>
     </Grid>
 </UserControl>
