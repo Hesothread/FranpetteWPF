@@ -6,33 +6,56 @@
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="800">
     <UserControl.Resources>
-        <Style x:Key="BottomButton" TargetType="TextBlock">
-            <Setter Property="Padding" Value="8"/>
+        <Style x:Key="BottomButton" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="8"/>
             <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
-        <Style x:Key="LeftButton" TargetType="TextBlock" BasedOn="{StaticResource BottomButton}">
-            <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Style x:Key="LeftButton" TargetType="Button" BasedOn="{StaticResource BottomButton}">
             <Setter Property="Foreground" Value="Gray"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="White"/>
-                </Trigger>
-            </Style.Triggers>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
-        <Style x:Key="RightButton" TargetType="TextBlock" BasedOn="{StaticResource BottomButton}">
-            <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Style x:Key="RightButton" TargetType="Button" BasedOn="{StaticResource BottomButton}">
             <Setter Property="Foreground" Value="White"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="LightGreen"/>
-                </Trigger>
-            </Style.Triggers>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="LightGreen"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </UserControl.Resources>
     <Grid Name="BBarGrid" Background="Black">
-        <TextBlock Style="{StaticResource LeftButton}" Text="{Binding CurrentVersion}"/>
-        <TextBlock Style="{StaticResource RightButton}" Text="Synchroniser"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Style="{StaticResource LeftButton}" Content="{Binding CurrentVersion}"/>
+        <Button Grid.Column="2" Style="{StaticResource RightButton}" Content="Synchroniser"/>
     </Grid>
 </UserControl>
