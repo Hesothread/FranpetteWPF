@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,18 +18,25 @@ using System.Windows.Shapes;
 namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
 {
     /// <summary>
-    /// Logique d'interaction pour CServerList.xaml
+    /// Logique d'interaction pour CServer.xaml
     /// </summary>
-    public partial class CServerList : UserControl
+    public partial class CServer : UserControl, INotifyPropertyChanged
     {
-        public CServerList()
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        public CServer()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        protected void OnPropertyChanged(string name)
         {
-            CServer server = sender as CServer;
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }

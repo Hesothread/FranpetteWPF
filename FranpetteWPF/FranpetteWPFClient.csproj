@@ -89,6 +89,9 @@
       <DependentUpon>CAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="FranpetteWindow\HomeControls\CenterAdmin\CAdminDataContext.cs" />
+    <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServer.xaml.cs">
+      <DependentUpon>CServer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FranpetteWindow\HomeControls\CenterServerList\CServerListAdmin.xaml.cs">
       <DependentUpon>CServerListAdmin.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FranpetteWindow\HomeControls\CenterAdmin\CAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FranpetteWindow\HomeControls\CenterServerList\CServer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

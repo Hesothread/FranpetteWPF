@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList.CServer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList"
+             mc:Ignorable="d" 
+             HorizontalAlignment="Stretch" 
+             d:DesignWidth="800">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="{Binding ServerIcone}"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Text="{Binding ServerName}"/>
+        
+        <CheckBox Grid.Column="3" Grid.Row="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" IsChecked="{Binding IsStarted}" FlowDirection="RightToLeft"/>
+        <TextBlock Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" TextAlignment="Center" Text="{Binding StartedUserName}"/>
+        <TextBlock Grid.Column="3" Grid.Row="2" VerticalAlignment="Stretch" TextAlignment="Center" Text="{Binding StartedIP}"/>
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="3" Height="100">
+            
+        </Grid>
+    </Grid>
+</UserControl>
