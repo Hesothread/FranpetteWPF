@@ -12,14 +12,37 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private UserControl _centerMenu;
-        public UserControl CenterMenu
+        private UserControl _centerNews;
+        private UserControl _centerOptions;
+        private UserControl _centerPage;
+
+        public UserControl CenterNews
         {
-            get { return _centerMenu; }
+            get { return _centerNews; }
             set
             {
-                _centerMenu = value;
-                OnPropertyChanged("CenterMenu");
+                _centerNews = value;
+                OnPropertyChanged("CenterNews");
+            }
+        }
+
+        public UserControl CenterOptions
+        {
+            get { return _centerOptions; }
+            set
+            {
+                _centerOptions = value;
+                OnPropertyChanged("CenterOptions");
+            }
+        }
+
+        public UserControl CenterPage
+        {
+            get { return _centerPage; }
+            set
+            {
+                _centerPage = value;
+                OnPropertyChanged("CenterPage");
             }
         }
 

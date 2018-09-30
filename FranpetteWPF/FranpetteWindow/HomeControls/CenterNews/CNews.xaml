@@ -12,7 +12,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="1" Padding="0,20" Background="Transparent" VerticalScrollBarVisibility="Auto">
-        
+            CenterNews
         </ScrollViewer>
     </Grid>
 </UserControl>

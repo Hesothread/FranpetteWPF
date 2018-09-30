@@ -1,4 +1,5 @@
 ﻿using FranpetteWPF.FranpetteWindow.HomeControls.CenterNews;
+using FranpetteWPF.FranpetteWindow.HomeControls.CenterOptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,10 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            _homeContext.CenterMenu = new CNews();
+            _homeContext.CenterNews = new CNews();
+            _homeContext.CenterOptions = new COptions();
+
+            _homeContext.CenterPage = _homeContext.CenterOptions;
         }
     }
 }

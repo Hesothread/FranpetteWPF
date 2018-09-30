@@ -19,7 +19,7 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100"/>
-        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding CenterMenu}"/>
+        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding CenterPage}"/>
         <RightFriends:RFriends  Grid.Row="1" Grid.Column="1" MaxWidth="200"/>
         <BottomBar:BBar  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>

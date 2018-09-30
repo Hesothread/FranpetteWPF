@@ -24,5 +24,10 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
         {
             InitializeComponent();
         }
+
+        private void OptionsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
