@@ -1,4 +1,5 @@
 ﻿using FranpetteWPF.FranpetteWindow.HomeControls.CenterNews;
+using FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList;
 using FranpetteWPF.FranpetteWindow.HomeControls.CenterOptions;
 using System;
 using System.Collections.Generic;
@@ -34,9 +35,29 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _homeContext.CenterNews = new CNews();
+            _homeContext.CenterServerList = new CServerList();
             _homeContext.CenterOptions = new COptions();
 
-            _homeContext.CenterPage = _homeContext.CenterOptions;
+            UCTopBar.NewsUCEvent += LoadCNews;
+            UCTopBar.ServerListUCEvent += LoadCServerList;
+            UCTopBar.OptionsUCEvent += LoadCOptions;
+
+            _homeContext.HomeContent = _homeContext.CenterServerList;
+        }
+
+        private void LoadCNews()
+        {
+            _homeContext.HomeContent = _homeContext.CenterNews;
+        }
+
+        private void LoadCServerList()
+        {
+            _homeContext.HomeContent = _homeContext.CenterServerList;
+        }
+
+        private void LoadCOptions()
+        {
+            _homeContext.HomeContent = _homeContext.CenterOptions;
         }
     }
 }

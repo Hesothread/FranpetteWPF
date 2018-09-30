@@ -13,8 +13,9 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
         public event PropertyChangedEventHandler PropertyChanged;
 
         private UserControl _centerNews;
+        private UserControl _centerServerList;
         private UserControl _centerOptions;
-        private UserControl _centerPage;
+        private UserControl _homeContent;
 
         public UserControl CenterNews
         {
@@ -23,6 +24,16 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
             {
                 _centerNews = value;
                 OnPropertyChanged("CenterNews");
+            }
+        }
+
+        public UserControl CenterServerList
+        {
+            get { return _centerServerList; }
+            set
+            {
+                _centerServerList = value;
+                OnPropertyChanged("CenterServerList");
             }
         }
 
@@ -36,13 +47,13 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
             }
         }
 
-        public UserControl CenterPage
+        public UserControl HomeContent
         {
-            get { return _centerPage; }
+            get { return _homeContent; }
             set
             {
-                _centerPage = value;
-                OnPropertyChanged("CenterPage");
+                _homeContent = value;
+                OnPropertyChanged("HomeContent");
             }
         }
 

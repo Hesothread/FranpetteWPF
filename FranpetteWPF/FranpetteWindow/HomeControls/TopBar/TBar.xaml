@@ -108,8 +108,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource MenuButton}" Grid.Column="1" Content="Actualités" ToolTip="Actualités"/>
-            <Button Style="{StaticResource MenuButton}" Grid.Column="2" Content="Mes Partages" ToolTip="Mes Partages"/>
+            <Button Name="NewsBtn" Style="{StaticResource MenuButton}" Grid.Column="1" Content="Actualités" ToolTip="Actualités" Click="NewsBtn_Click"/>
+            <Button Name="ServerListBtn" Style="{StaticResource MenuButton}" Grid.Column="2" Content="Mes Partages" ToolTip="Mes Partages" Click="ServerListBtn_Click"/>
             <Button Name="OptionsBtn" Style="{StaticResource MenuButton}" Grid.Column="3" Content="Paramètres" ToolTip="Paramètres" Click="OptionsBtn_Click"/>
             <Button Style="{StaticResource FriendsButton}" Grid.Column="4" Content="🞀 Amis" ToolTip="Amis"/>
         </Grid>
