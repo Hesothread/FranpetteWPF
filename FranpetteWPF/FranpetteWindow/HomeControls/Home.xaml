@@ -8,7 +8,7 @@
              xmlns:TopBar="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.TopBar"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="650" Loaded="UserControl_Loaded">
-    <Grid>
+    <Grid Name="HomeGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -18,9 +18,8 @@
             <ColumnDefinition />
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-
-        <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100" />
-        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding CenterMenu}" />
+        <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100"/>
+        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding CenterMenu}"/>
         <RightFriends:RFriends  Grid.Row="1" Grid.Column="1" MaxWidth="200"/>
         <BottomBar:BBar  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>
