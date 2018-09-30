@@ -35,10 +35,42 @@
             <Setter Property="Padding" Value="10"/>
             <Setter Property="Margin" Value="10"/>
             <Setter Property="FontSize" Value="16"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Background" Value="#111"/>
-            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="MenuButtonBorder" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="LightGreen"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FriendsButton" TargetType="Button" BasedOn="{StaticResource MenuButton}">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="MenuButtonBorder" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="LightGreen"/>
+                                <Setter Property="Width" Value="auto"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </UserControl.Resources>
     <Grid Name="TBarGrid" Background="Black">
@@ -48,16 +80,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Button Style="{StaticResource TopButton}" Grid.Column="0" Content="🌍 Français"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="1" Content="Options"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="2" Content="Plus"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="4" Content="Mon compte ⯆"/>
-        <Grid Grid.Row="1" Grid.ColumnSpan="5" Background="#2D2D30">
+        <Button Style="{StaticResource TopButton}" Grid.Column="2" Content="Mon compte ⯆"/>
+        <Button Style="{StaticResource TopButton}" Grid.Column="3" Content="Aide"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="4" Background="#0A0A0A">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto"/>
@@ -65,9 +95,10 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Style="{StaticResource MenuButton}" Grid.Column="1" Content="📰 Nouveautés"/>
-            <Button Style="{StaticResource MenuButton}" Grid.Column="2" Content="🖥 Serveurs"/>
-            <Button Style="{StaticResource MenuButton}" Grid.Column="3" Content="🗪 Mes amis"/>
+            <Button Style="{StaticResource MenuButton}" Grid.Column="1" Content="Actualités"/>
+            <Button Style="{StaticResource MenuButton}" Grid.Column="2" Content="Partages"/>
+            <Button Style="{StaticResource MenuButton}" Grid.Column="3" Content="Paramètres"/>
+            <Button Style="{StaticResource FriendsButton}" Grid.Column="4" Content="🞀 Amis"/>
         </Grid>
     </Grid>
 </UserControl>

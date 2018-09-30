@@ -7,7 +7,7 @@
              xmlns:RightFriends="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.RightFriends"
              xmlns:TopBar="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.TopBar"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1300" Loaded="UserControl_Loaded">
+             d:DesignHeight="650" d:DesignWidth="650" Loaded="UserControl_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
