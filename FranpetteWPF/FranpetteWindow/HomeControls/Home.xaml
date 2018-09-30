@@ -15,12 +15,12 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <TopBar:TBar x:Name="UCTopBar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100"/>
-        <UserControl  Grid.Row="1" Grid.Column="0" Content="{Binding HomeContent}"/>
-        <RightFriends:RFriends  Grid.Row="1" Grid.Column="1" MaxWidth="200"/>
-        <BottomBar:BBar  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
+        <TopBar:TBar x:Name="UCTBar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="100"/>
+        <UserControl Grid.Row="1" Grid.Column="0" Content="{Binding HomeContent}"/>
+        <RightFriends:RFriends x:Name="UCRFriends" Grid.Row="1" Grid.Column="1" Width="200"/>
+        <BottomBar:BBar Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>
 </UserControl>

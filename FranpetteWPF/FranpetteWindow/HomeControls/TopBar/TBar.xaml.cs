@@ -25,6 +25,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
         public event UCEventHandler NewsUCEvent;
         public event UCEventHandler ServerListUCEvent;
         public event UCEventHandler OptionsUCEvent;
+        public event UCEventHandler FriendsUCEvent;
 
         public TBar()
         {
@@ -59,6 +60,16 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
         private void OptionsBtn_Click(object sender, RoutedEventArgs e)
         {
             GoToOptions();
+        }
+
+        public void OpenFriends()
+        {
+            if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
+        }
+
+        private void FriendsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFriends();
         }
     }
 }
