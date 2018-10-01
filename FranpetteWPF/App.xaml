@@ -1,18 +1,24 @@
 ﻿<Application x:Class="FranpetteWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FranpetteWPF"
-             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="FranpetteWindow/Franpette.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            
-            <system:String x:Key="lang_localizedMessage">en-US Message</system:String>
-            <system:String x:Key="lang_remember">Remember</system:String>
-            <system:String x:Key="lang_username">Username</system:String>
-            <system:String x:Key="lang_password">Password</system:String>
-            <system:String x:Key="lang_server_ip_or_domaine">Server IP or domaine</system:String>
-            <system:String x:Key="lang_login_in">Log in</system:String>
+            <!-- Colors https://flatuicolors.com/palette/se -->
+            <Brush x:Key="Black">#1e272e</Brush>
+            <Brush x:Key="DarkGray">#485460</Brush>
+            <Brush x:Key="Gray">#808e9b</Brush>
+            <Brush x:Key="White">#d2dae2</Brush>
+            <Brush x:Key="Green">#05c46b</Brush>
+            <Brush x:Key="LightGreen">#0be881</Brush>
+            <!-- Text -->
+            <sys:String x:Key="lang_localizedMessage">en-US Message</sys:String>
+            <sys:String x:Key="lang_remember">Remember</sys:String>
+            <sys:String x:Key="lang_username">Username</sys:String>
+            <sys:String x:Key="lang_password">Password</sys:String>
+            <sys:String x:Key="lang_server_ip_or_domaine">Server IP or domaine</sys:String>
+            <sys:String x:Key="lang_login_in">Log in</sys:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -26,17 +26,14 @@ namespace FranpetteWPF.FranpetteWindow.LoginControls
 
         public void RaiseMyEvent()
         {
-            // Your logic
             if (MyPersonalizedUCEvent != null)
-            {
                 MyPersonalizedUCEvent.Invoke();
-            }
         }
 
         public Login()
         {
             InitializeComponent();
-         }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

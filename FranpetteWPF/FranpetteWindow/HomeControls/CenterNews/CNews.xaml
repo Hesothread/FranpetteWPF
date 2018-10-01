@@ -5,13 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="650">
-    <Grid Name="CNewsGrid" Background="#2D2D30">
+    <Grid Name="CNewsGrid" Background="{StaticResource DarkGray}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="1" Padding="0,20" Background="Transparent" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Column="1" Padding="0,20" Background="Transparent" Foreground="{StaticResource White}" VerticalScrollBarVisibility="Auto">
             CenterNews
         </ScrollViewer>
     </Grid>

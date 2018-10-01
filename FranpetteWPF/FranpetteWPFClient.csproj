@@ -171,9 +171,13 @@
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Ressources\password.png" />
+    <Resource Include="Ressources\server.png" />
+    <Resource Include="Ressources\user.png" />
     <Resource Include="Ressources\franpette-logo.png" />
     <Resource Include="Ressources\franpette.ico" />
     <Resource Include="Ressources\franpette.png" />
+    <Resource Include="Ressources\chat.png" />
     <Content Include="Ressources\franpette.svg" />
   </ItemGroup>
   <ItemGroup>
