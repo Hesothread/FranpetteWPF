@@ -4,17 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="650">
+             d:DesignHeight="30" d:DesignWidth="650">
     <UserControl.Resources>
         <Style x:Key="TopButton" TargetType="Button">
-            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Margin" Value="10,0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="{StaticResource Gray}"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -30,90 +29,16 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="MenuButton" TargetType="Button">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="Verdana"/>
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="{StaticResource White}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
-                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Foreground" Value="{StaticResource LightGreen}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="FriendsButton" TargetType="Button" BasedOn="{StaticResource MenuButton}">
-            <Setter Property="HorizontalAlignment" Value="Right"/>
-            <Setter Property="Width" Value="30"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="MenuButtonBorder" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
-                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="{StaticResource LightGreen}"/>
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0:0:0.150" To="75" Storyboard.TargetProperty="Width" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0:0:0.150" To="30" Storyboard.TargetProperty="Width" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </UserControl.Resources>
     <Grid Name="TBarGrid" Background="{StaticResource Black}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Button Style="{StaticResource TopButton}" Grid.Column="0" Content="🌍 Français" ToolTip="Langue"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="2" Content="Mon compte ⯆" ToolTip="Mon compte"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="3" Content="Aide" ToolTip="Aide"/>
-        <Grid Grid.Row="1" Grid.ColumnSpan="4" Background="{StaticResource DarkGray}">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button Name="NewsBtn" Style="{StaticResource MenuButton}" Grid.Column="1" Content="Actualités" ToolTip="Actualités" Click="NewsBtn_Click"/>
-            <Button Name="ServerListBtn" Style="{StaticResource MenuButton}" Grid.Column="2" Content="Mes Partages" ToolTip="Mes Partages" Click="ServerListBtn_Click"/>
-            <Button Name="OptionsBtn" Style="{StaticResource MenuButton}" Grid.Column="3" Content="Paramètres" ToolTip="Paramètres" Click="OptionsBtn_Click"/>
-            <Button Name="FriendsBtn" Style="{StaticResource FriendsButton}" Grid.Column="4" Content="🞀 Amis" ToolTip="Amis" Click="FriendsBtn_Click"/>
-        </Grid>
+        <Button Style="{StaticResource TopButton}" Grid.Column="0" Content="🌍 Français" ToolTip="Langues"/>
+        <Button Style="{StaticResource TopButton}" Grid.Column="2" Content="Mon compte ⯆"/>
+        <Button Style="{StaticResource TopButton}" Grid.Column="3" Content="Aide"/>
     </Grid>
 </UserControl>

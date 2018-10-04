@@ -20,56 +20,9 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
     /// </summary>
     public partial class TBar : UserControl
     {
-        public delegate void UCEventHandler();
-
-        public event UCEventHandler NewsUCEvent;
-        public event UCEventHandler ServerListUCEvent;
-        public event UCEventHandler OptionsUCEvent;
-        public event UCEventHandler FriendsUCEvent;
-
         public TBar()
         {
             InitializeComponent();
-        }
-
-        public void GoToNews()
-        {
-            if (NewsUCEvent != null) NewsUCEvent.Invoke();
-        }
-        
-        private void NewsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            GoToNews();
-        }
-
-        public void GoToServerList()
-        {
-            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
-        }
-
-        private void ServerListBtn_Click(object sender, RoutedEventArgs e)
-        {
-            GoToServerList();
-        }
-
-        public void GoToOptions()
-        {
-            if (OptionsUCEvent != null) OptionsUCEvent.Invoke();
-        }
-
-        private void OptionsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            GoToOptions();
-        }
-
-        public void OpenFriends()
-        {
-            if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
-        }
-
-        private void FriendsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFriends();
         }
     }
 }

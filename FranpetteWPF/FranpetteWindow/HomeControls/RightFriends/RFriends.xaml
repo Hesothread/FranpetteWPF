@@ -4,8 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
+             Name="Self"
              d:DesignHeight="400" d:DesignWidth="200">
     <Grid Name="RFriendsGrid" Background="{StaticResource DarkGray}">
-        
+        <ScrollViewer Padding="10" Background="Transparent" Foreground="{StaticResource White}" VerticalScrollBarVisibility="Auto">
+            RightFriends
+        </ScrollViewer>
     </Grid>
 </UserControl>

@@ -24,7 +24,6 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
     public partial class Home : UserControl
     {
         private HomeDataContext _homeContext;
-        private Thickness _friendsMarginThickness;
 
         public Home()
         {
@@ -35,18 +34,14 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            _homeContext.CenterNews = new CNews();
+            _homeContext.CenterNews =       new CNews();
             _homeContext.CenterServerList = new CServerList();
-            _homeContext.CenterOptions = new COptions();
-            _friendsMarginThickness = new Thickness(0, 0, -200, 0);
-
-            UCTBar.NewsUCEvent += LoadCNews;
-            UCTBar.ServerListUCEvent += LoadCServerList;
-            UCTBar.OptionsUCEvent += LoadCOptions;
-            UCTBar.FriendsUCEvent += ToogleRFriends;
-            UCRFriends.Margin = _friendsMarginThickness;
-
+            _homeContext.CenterOptions =    new COptions();
             _homeContext.HomeContent = _homeContext.CenterServerList;
+            UCMBar.NewsUCEvent += LoadCNews;
+            UCMBar.ServerListUCEvent += LoadCServerList;
+            UCMBar.OptionsUCEvent += LoadCOptions;
+            UCMBar.FriendsUCEvent += ToogleRFriends;
         }
 
         private void LoadCNews()
@@ -66,12 +61,10 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
 
         private void ToogleRFriends()
         {
-            if (_friendsMarginThickness.Right == -200)
-                _friendsMarginThickness.Right = 0;
+            if (!UCRFriends.IsShown)
+                UCRFriends.Show();
             else
-                _friendsMarginThickness.Right = -200;
-
-            UCRFriends.Margin = _friendsMarginThickness;
+                UCRFriends.Hide();
         }
     }
 }
