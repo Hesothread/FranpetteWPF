@@ -9,7 +9,7 @@
              xmlns:MenuBar="clr-namespace:FranpetteWPF.FranpetteWindow.HomeControls.MenuBar"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800" Loaded="UserControl_Loaded">
-    <Grid Name="HomeGrid">
+    <Grid Name="HomeGrid" Background="{StaticResource DarkGray}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,7 +23,7 @@
         <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
         <MenuBar:MBar x:Name="UCMBar" Grid.Row="1" Grid.Column="0" Height="70"/>
         <UserControl Grid.Row="2" Grid.Column="0" Content="{Binding HomeContent}"/>
-        <RightFriends:RFriends x:Name="UCRFriends" Grid.Row="1" Grid.RowSpan="2"  Grid.Column="1" Width="200" BorderBrush="Gray" BorderThickness="1,0,0,0" Margin="{Binding RightMargin, ElementName=UCRFriends}"/>
+        <RightFriends:RFriends x:Name="UCRFriends" Grid.Row="1" Grid.RowSpan="2"  Grid.Column="1" Width="250" BorderBrush="Gray" BorderThickness="1,0,0,0" Margin="{Binding RightMargin, ElementName=UCRFriends}"/>
         <BottomBar:BBar Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>
 </UserControl>

@@ -21,6 +21,9 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
     /// </summary>
     public partial class RFriends : UserControl
     {
+        private static Thickness RightPushed = new Thickness(0, 0, -250, 0);
+        private static Thickness NotPushed = new Thickness(0);
+
         public bool IsShown
         {
             get { return (bool)GetValue(IsShownProperty); }
@@ -37,10 +40,12 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         }
 
         public static readonly DependencyProperty RightMarginProperty =
-            DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(new Thickness(0, 0, -200, 0)));
+            DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(RightPushed));
 
-        private ThicknessAnimation showAnimation = new ThicknessAnimation(new Thickness(0, 0, -200, 0), new Thickness(0), new Duration(TimeSpan.FromSeconds(0.15)));
-        private ThicknessAnimation hideAnimation = new ThicknessAnimation(new Thickness(0), new Thickness(0, 0, -200, 0), new Duration(TimeSpan.FromSeconds(0.15)));
+        private BackEase backEase = new BackEase();
+        private BounceEase bounceEase = new BounceEase();
+        private ThicknessAnimation showAnimation = new ThicknessAnimation(RightPushed, NotPushed, new Duration(TimeSpan.FromSeconds(0.5)));
+        private ThicknessAnimation hideAnimation = new ThicknessAnimation(NotPushed, RightPushed, new Duration(TimeSpan.FromSeconds(0.5)));
 
         public RFriends()
         {
@@ -50,12 +55,17 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         public void Show()
         {
             IsShown = true;
+            bounceEase.Bounces = 1;
+            bounceEase.Bounciness = 4;
+            showAnimation.EasingFunction = bounceEase;
             BeginAnimation(RightMarginProperty, showAnimation);
         }
 
         public void Hide()
         {
             IsShown = false;
+            backEase.EasingMode = EasingMode.EaseIn;
+            hideAnimation.EasingFunction = backEase;
             BeginAnimation(RightMarginProperty, hideAnimation);
         }
     }
