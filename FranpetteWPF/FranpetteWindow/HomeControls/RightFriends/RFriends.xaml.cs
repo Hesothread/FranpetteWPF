@@ -43,7 +43,6 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
             DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(RightPushed));
 
         private BackEase backEase = new BackEase();
-        private BounceEase bounceEase = new BounceEase();
         private ThicknessAnimation showAnimation = new ThicknessAnimation(RightPushed, NotPushed, new Duration(TimeSpan.FromSeconds(0.5)));
         private ThicknessAnimation hideAnimation = new ThicknessAnimation(NotPushed, RightPushed, new Duration(TimeSpan.FromSeconds(0.5)));
 
@@ -55,9 +54,8 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         public void Show()
         {
             IsShown = true;
-            bounceEase.Bounces = 1;
-            bounceEase.Bounciness = 4;
-            showAnimation.EasingFunction = bounceEase;
+            backEase.EasingMode = EasingMode.EaseOut;
+            showAnimation.EasingFunction = backEase;
             BeginAnimation(RightMarginProperty, showAnimation);
         }
 
