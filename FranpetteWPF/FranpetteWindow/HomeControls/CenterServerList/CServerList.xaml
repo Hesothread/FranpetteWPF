@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <Local:CServerListFilter Grid.Row="0" Grid.Column="1" Height="30"/>
         <Local:CServerListAdmin Grid.Row="1" Grid.Column="1" Height="30" />
-        <DataGrid Grid.Row="2" Grid.Column="1" ItemsSource="{Binding ServerList}" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
+        <DataGrid CanUserAddRows="False" Grid.Row="2" Grid.Column="1" ItemsSource="{Binding ServerList}" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns >
                 <DataGridTemplateColumn Header="Server List" Width="*" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate >

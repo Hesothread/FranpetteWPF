@@ -20,9 +20,18 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
     /// </summary>
     public partial class CServerList : UserControl
     {
+        private CServerListDataContext _context = new CServerListDataContext();
+
         public CServerList()
         {
             InitializeComponent();
+            DataContext = _context;
+            _context.ServerList.Add(new CServer());
+            _context.ServerList.Add(new CServer());
+            _context.ServerList.Add(new CServer());
+            _context.ServerList.Add(new CServer());
+            _context.ServerList.Add(new CServer());
+            _context.ServerList.Add(new CServer());
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

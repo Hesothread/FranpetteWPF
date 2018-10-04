@@ -21,34 +21,32 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
     /// </summary>
     public partial class RFriends : UserControl
     {
-        private static Thickness RightPushed = new Thickness(0, 0, -250, 0);
-        private static Thickness NotPushed = new Thickness(0);
+        public static readonly DependencyProperty IsShownProperty = DependencyProperty.Register("IsShown", typeof(bool), typeof(RFriends), new PropertyMetadata(false));
+        public static readonly DependencyProperty RightMarginProperty = DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(RightPushed));
 
         public bool IsShown
         {
             get { return (bool)GetValue(IsShownProperty); }
             set { SetValue(IsShownProperty, value); }
         }
-
-        public static readonly DependencyProperty IsShownProperty =
-            DependencyProperty.Register("IsShown", typeof(bool), typeof(RFriends), new PropertyMetadata(false));
-
         public Thickness RightMargin
         {
             get { return (Thickness)GetValue(RightMarginProperty); }
             set { SetValue(RightMarginProperty, value); }
         }
 
-        public static readonly DependencyProperty RightMarginProperty =
-            DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(RightPushed));
+        private static Thickness RightPushed = new Thickness(0, 0, -250, 0);
+        private static Thickness NotPushed = new Thickness(0);
 
         private BackEase backEase = new BackEase();
-        private ThicknessAnimation showAnimation = new ThicknessAnimation(RightPushed, NotPushed, new Duration(TimeSpan.FromSeconds(0.5)));
-        private ThicknessAnimation hideAnimation = new ThicknessAnimation(NotPushed, RightPushed, new Duration(TimeSpan.FromSeconds(0.5)));
+        private ThicknessAnimation showAnimation;
+        private ThicknessAnimation hideAnimation;
 
         public RFriends()
         {
             InitializeComponent();
+            showAnimation = new ThicknessAnimation(new Thickness(0, 0, -250, 0), NotPushed, new Duration(TimeSpan.FromSeconds(0.5)));
+            hideAnimation = new ThicknessAnimation(NotPushed, RightPushed, new Duration(TimeSpan.FromSeconds(0.5)));
         }
 
         public void Show()

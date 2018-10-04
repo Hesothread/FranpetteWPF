@@ -13,7 +13,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private ObservableCollection<CServer> _serverList;
+        private ObservableCollection<CServer> _serverList = new ObservableCollection<CServer>();
         public ObservableCollection<CServer> ServerList
         {
             get { return _serverList; }
