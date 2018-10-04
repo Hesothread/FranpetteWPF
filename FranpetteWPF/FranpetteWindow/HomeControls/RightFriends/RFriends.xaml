@@ -1,14 +1,110 @@
-﻿<UserControl x:Class="FranpetteWPF.FranpetteWindow.HomeControls.RightFriends.RFriends"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="FranpetteWPF.FranpetteWindow.HomeControls.RightFriends.RFriends" 
              mc:Ignorable="d" 
-             Name="Self"
-             d:DesignHeight="400" d:DesignWidth="200">
-    <Grid Name="RFriendsGrid" Background="{StaticResource DarkGray}">
-        <ScrollViewer Padding="10" Background="Transparent" Foreground="{StaticResource White}" VerticalScrollBarVisibility="Auto">
-            RightFriends
-        </ScrollViewer>
+             x:Name="Self"
+             d:DesignHeight="650" d:DesignWidth="250">
+    <Grid x:Name="RFriendsGrid" Background="{StaticResource DarkGray}">
+        <ListBox Height="auto" Width="auto" FontSize="14" FontFamily="Noto Sans" Background="Transparent" Foreground="{StaticResource White}">
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="0000000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="00000000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+            <Canvas Height="30" Margin="5">
+                <Image Height="30" Width="30" Source="/Ressources/user.png"/>
+                <TextBlock Text="000000000000000000000000" Margin="35,5,0,0"/>
+            </Canvas>
+        </ListBox>
     </Grid>
 </UserControl>
