@@ -109,6 +109,9 @@
     <Compile Include="FranpetteWindow\HomeControls\MenuBar\MBar.xaml.cs">
       <DependentUpon>MBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriend.xaml.cs">
+      <DependentUpon>RFriend.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriends.xaml.cs">
       <DependentUpon>RFriends.xaml</DependentUpon>
     </Compile>
@@ -174,6 +177,10 @@
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Ressources\offline.png" />
+    <Resource Include="Ressources\offlinex32.png" />
+    <Resource Include="Ressources\online.png" />
+    <Resource Include="Ressources\onlinex32.png" />
     <Resource Include="Ressources\password.png" />
     <Resource Include="Ressources\server.png" />
     <Resource Include="Ressources\user.png" />
@@ -233,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FranpetteWindow\HomeControls\MenuBar\MBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FranpetteWindow\HomeControls\RightFriends\RFriend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

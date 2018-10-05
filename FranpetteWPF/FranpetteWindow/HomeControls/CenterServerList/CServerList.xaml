@@ -24,7 +24,7 @@
                 <DataGridTemplateColumn Header="Server List" Width="*" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate>
-                            <UserControl Content="{Binding}" />
+                            <UserControl Content="{Binding}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

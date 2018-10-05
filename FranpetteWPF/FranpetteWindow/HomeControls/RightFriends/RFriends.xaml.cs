@@ -21,8 +21,10 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
     /// </summary>
     public partial class RFriends : UserControl
     {
+        private RFriendsDataContext _context = new RFriendsDataContext();
+
         public static readonly DependencyProperty IsShownProperty = DependencyProperty.Register("IsShown", typeof(bool), typeof(RFriends), new PropertyMetadata(false));
-        public static readonly DependencyProperty RightMarginProperty = DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(RightPushed));
+        public static readonly DependencyProperty RightMarginProperty = DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(new Thickness(0, 0, -250, 0)));
 
         public bool IsShown
         {
@@ -35,9 +37,6 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
             set { SetValue(RightMarginProperty, value); }
         }
 
-        private static Thickness RightPushed = new Thickness(0, 0, -250, 0);
-        private static Thickness NotPushed = new Thickness(0);
-
         private BackEase backEase = new BackEase();
         private ThicknessAnimation showAnimation;
         private ThicknessAnimation hideAnimation;
@@ -45,8 +44,13 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         public RFriends()
         {
             InitializeComponent();
-            showAnimation = new ThicknessAnimation(new Thickness(0, 0, -250, 0), NotPushed, new Duration(TimeSpan.FromSeconds(0.5)));
-            hideAnimation = new ThicknessAnimation(NotPushed, RightPushed, new Duration(TimeSpan.FromSeconds(0.5)));
+            DataContext = _context;
+            showAnimation = new ThicknessAnimation(new Thickness(0, 0, -250, 0), new Thickness(0), new Duration(TimeSpan.FromSeconds(0.4)));
+            hideAnimation = new ThicknessAnimation(new Thickness(0), new Thickness(0, 0, -250, 0), new Duration(TimeSpan.FromSeconds(0.4)));
+
+            _context.FriendList.Add(new RFriend("Deshtros"));
+            _context.FriendList.Add(new RFriend("Flop", true, true));
+            _context.FriendList.Add(new RFriend("SamSam", false));
         }
 
         public void Show()
