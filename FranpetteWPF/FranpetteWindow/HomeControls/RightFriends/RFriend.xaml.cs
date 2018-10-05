@@ -44,7 +44,40 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
 
         public string StatusIcon
         {
-            get { return (_fOnline) ? "/Ressources/onlinex32.png" : "/Ressources/offlinex32.png"; }
+            get
+            {
+                if (FOnline)
+                    return (FAfk) ? "⚫" : "⚫";
+                else
+                    return "⚪";
+            }
+        }
+
+        public string StatusDesc
+        {
+            get
+            {
+                if (FOnline)
+                    return (FAfk) ? "Absent" : "En ligne";
+                else
+                    return "Hors ligne";
+            }
+        }
+
+        public Brush StatusIconColor
+        {
+            get
+            {
+                if (FOnline)
+                    return (FAfk) ? (Brush)(new BrushConverter().ConvertFrom("#FFB400")) : (Brush)(new BrushConverter().ConvertFrom("#00FF00"));
+                else
+                    return (Brush)(new BrushConverter().ConvertFrom("#808e9b"));
+            }
+        }
+
+        public Brush StatusNameColor
+        {
+            get { return (FOnline) ? (Brush)(new BrushConverter().ConvertFrom("#0fbcf9")) : (Brush)(new BrushConverter().ConvertFrom("#808e9b")); }
         }
 
         public RFriend(string name, bool online = true, bool afk = false)

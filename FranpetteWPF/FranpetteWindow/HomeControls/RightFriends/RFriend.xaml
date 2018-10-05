@@ -7,13 +7,22 @@
              mc:Ignorable="d" 
              Name="Self"
              d:DesignHeight="30" d:DesignWidth="200">
-    <Grid Name="RFriendGrid">
+    <UserControl.Resources>
+        <Style x:Key="FriendStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource Self}}">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Height="30" Width="30" Source="{Binding StatusIcon, ElementName=Self}"/>
-        <Label Grid.Column="1" Content="{Binding FName, ElementName=Self}" Foreground="White"/>
+        <Label Style="{StaticResource FriendStyle}" Grid.Column="1" Content="{Binding StatusIcon, ElementName=Self}" Foreground="{Binding StatusIconColor, ElementName=Self}"/>
+        <Label Style="{StaticResource FriendStyle}" Grid.Column="2" Content="{Binding FName, ElementName=Self}" Foreground="{Binding StatusNameColor, ElementName=Self}"/>
+        <Label Style="{StaticResource FriendStyle}" Grid.Column="3" Content="{Binding StatusDesc, ElementName=Self}" Foreground="{StaticResource DarkGray}"/>
     </Grid>
 </UserControl>

@@ -10,6 +10,7 @@
             <Brush x:Key="DarkGray">#485460</Brush>
             <Brush x:Key="Gray">#808e9b</Brush>
             <Brush x:Key="White">#d2dae2</Brush>
+            <Brush x:Key="Blue">#0fbcf9</Brush>
             <Brush x:Key="Green">#05c46b</Brush>
             <Brush x:Key="LightGreen">#0be881</Brush>
             <!-- Text -->

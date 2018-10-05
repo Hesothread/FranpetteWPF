@@ -177,10 +177,6 @@
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Ressources\offline.png" />
-    <Resource Include="Ressources\offlinex32.png" />
-    <Resource Include="Ressources\online.png" />
-    <Resource Include="Ressources\onlinex32.png" />
     <Resource Include="Ressources\password.png" />
     <Resource Include="Ressources\server.png" />
     <Resource Include="Ressources\user.png" />

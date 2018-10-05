@@ -24,7 +24,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         private RFriendsDataContext _context = new RFriendsDataContext();
 
         public static readonly DependencyProperty IsShownProperty = DependencyProperty.Register("IsShown", typeof(bool), typeof(RFriends), new PropertyMetadata(false));
-        public static readonly DependencyProperty RightMarginProperty = DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(new Thickness(0, 0, -250, 0)));
+        public static readonly DependencyProperty RightMarginProperty = DependencyProperty.Register("RightMargin", typeof(Thickness), typeof(RFriends), new PropertyMetadata(new Thickness(0, 0, -300, 0)));
 
         public bool IsShown
         {
@@ -45,12 +45,13 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
         {
             InitializeComponent();
             DataContext = _context;
-            showAnimation = new ThicknessAnimation(new Thickness(0, 0, -250, 0), new Thickness(0), new Duration(TimeSpan.FromSeconds(0.4)));
-            hideAnimation = new ThicknessAnimation(new Thickness(0), new Thickness(0, 0, -250, 0), new Duration(TimeSpan.FromSeconds(0.4)));
+            showAnimation = new ThicknessAnimation(new Thickness(0, 0, -300, 0), new Thickness(0), new Duration(TimeSpan.FromSeconds(0.25)));
+            hideAnimation = new ThicknessAnimation(new Thickness(0), new Thickness(0, 0, -300, 0), new Duration(TimeSpan.FromSeconds(0.25)));
 
-            _context.FriendList.Add(new RFriend("Deshtros"));
-            _context.FriendList.Add(new RFriend("Flop", true, true));
+            _context.FriendList.Add(new RFriend("Marc Alexandre"));
+            _context.FriendList.Add(new RFriend("Hugo Menard", true, true));
             _context.FriendList.Add(new RFriend("SamSam", false));
+            _context.FriendList.Add(new RFriend("Méowin", false));
         }
 
         public void Show()

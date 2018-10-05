@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="FranpetteWPF.FranpetteWindow.HomeControls.RightFriends.RFriends" 
              mc:Ignorable="d" 
-             d:DesignHeight="650" d:DesignWidth="250">
-    <Grid x:Name="RFriendsGrid" Background="{StaticResource DarkGray}">
-        <ListBox Height="auto" Width="auto" Background="Transparent" ItemsSource="{Binding FriendList}"/>
+             d:DesignHeight="650" d:DesignWidth="300">
+    <Grid>
+        <ListBox BorderThickness="0" Background="{StaticResource Black}" ItemsSource="{Binding FriendList}"/>
     </Grid>
 </UserControl>
