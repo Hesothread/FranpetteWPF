@@ -5,16 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="650">
-    <Grid Name="CNewsAdminGrid" Background="{StaticResource DarkGray}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="1" Padding="0,20" Background="Transparent" VerticalScrollBarVisibility="Auto">
+    <Grid Background="{StaticResource DarkGray}">
+        <ScrollViewer Padding="10" Background="White" VerticalScrollBarVisibility="Auto">
             <DockPanel Height="300" Width="auto" VerticalAlignment="Top">
                 <ToolBar DockPanel.Dock="Top">
-                    
+                    CenterNewsAdmin
                 </ToolBar>
                 <RichTextBox Name="rtbEditor"/>
             </DockPanel>
