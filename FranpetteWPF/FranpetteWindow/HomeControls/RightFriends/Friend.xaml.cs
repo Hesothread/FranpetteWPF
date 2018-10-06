@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,32 +17,46 @@ using System.Windows.Shapes;
 namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
 {
     /// <summary>
-    /// Logique d'interaction pour RFriend.xaml
+    /// Logique d'interaction pour Friend.xaml
     /// </summary>
-    public partial class RFriend : UserControl
+    public partial class Friend : UserControl, INotifyPropertyChanged
     {
-        private string _fName = "Inconnu";
-        private bool _fOnline;
-        private bool _fAfk;
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        private string _fName;
         public string FName
         {
             get { return _fName; }
-            set { _fName = value; }
+            set
+            {
+                _fName = value;
+                OnPropertyChanged("FName");
+            }
         }
 
+        private bool _fOnline;
         public bool FOnline
         {
             get { return _fOnline; }
-            set { _fOnline = value; }
+            set
+            {
+                _fOnline = value;
+                OnPropertyChanged("FOnline");
+            }
         }
 
+        private bool _fAfk;
         public bool FAfk
         {
             get { return _fAfk; }
-            set { _fAfk = value; }
+            set
+            {
+                _fAfk = value;
+                OnPropertyChanged("FAfk");
+            }
         }
 
+        private string _statusIcon;
         public string StatusIcon
         {
             get
@@ -51,8 +66,14 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
                 else
                     return "⚪";
             }
+            set
+            {
+                _statusIcon = value;
+                OnPropertyChanged("StatusIcon");
+            }
         }
 
+        private string _statusDesc;
         public string StatusDesc
         {
             get
@@ -61,6 +82,11 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
                     return (FAfk) ? "Absent" : "En ligne";
                 else
                     return "Hors ligne";
+            }
+            set
+            {
+                _statusDesc = value;
+                OnPropertyChanged("FOnline");
             }
         }
 
@@ -80,12 +106,23 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
             get { return (FOnline) ? (Brush)(new BrushConverter().ConvertFrom("#0fbcf9")) : (Brush)(new BrushConverter().ConvertFrom("#808e9b")); }
         }
 
-        public RFriend(string name, bool online = true, bool afk = false)
+        public Friend(string name, bool online = true, bool afk = false)
         {
+            InitializeComponent();
+            DataContext = this;
+
             FName = name;
             FOnline = online;
             FAfk = afk;
-            InitializeComponent();
+        }
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(name));
+            }
         }
     }
 }

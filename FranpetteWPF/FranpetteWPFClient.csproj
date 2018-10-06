@@ -109,8 +109,8 @@
     <Compile Include="FranpetteWindow\HomeControls\MenuBar\MBar.xaml.cs">
       <DependentUpon>MBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriend.xaml.cs">
-      <DependentUpon>RFriend.xaml</DependentUpon>
+    <Compile Include="FranpetteWindow\HomeControls\RightFriends\Friend.xaml.cs">
+      <DependentUpon>Friend.xaml</DependentUpon>
     </Compile>
     <Compile Include="FranpetteWindow\HomeControls\RightFriends\RFriends.xaml.cs">
       <DependentUpon>RFriends.xaml</DependentUpon>
@@ -239,7 +239,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FranpetteWindow\HomeControls\RightFriends\RFriend.xaml">
+    <Page Include="FranpetteWindow\HomeControls\RightFriends\Friend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

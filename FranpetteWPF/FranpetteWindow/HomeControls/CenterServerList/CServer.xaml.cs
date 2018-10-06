@@ -23,7 +23,18 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
     public partial class CServer : UserControl, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        
+
+        private string _serverIcon;
+        public string ServerIcon
+        {
+            get { return _serverIcon; }
+            private set
+            {
+                _serverIcon = value;
+                OnPropertyChanged("ServerIcon");
+            }
+        }
+
         public CServer()
         {
             InitializeComponent();

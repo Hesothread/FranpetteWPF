@@ -12,8 +12,8 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private ObservableCollection<RFriend> _friendList = new ObservableCollection<RFriend>();
-        public ObservableCollection<RFriend> FriendList
+        private ObservableCollection<Friend> _friendList = new ObservableCollection<Friend>();
+        public ObservableCollection<Friend> FriendList
         {
             get { return _friendList; }
             set

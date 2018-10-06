@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="{Binding ServerIcone}"/>
+        <Image Height="60" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="{Binding ServerIcon}"/>
         
         <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Text="{Binding ServerName}"/>
         

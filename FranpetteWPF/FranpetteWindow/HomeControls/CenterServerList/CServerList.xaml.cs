@@ -29,9 +29,6 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
             _context.ServerList.Add(new CServer());
             _context.ServerList.Add(new CServer());
             _context.ServerList.Add(new CServer());
-            _context.ServerList.Add(new CServer());
-            _context.ServerList.Add(new CServer());
-            _context.ServerList.Add(new CServer());
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -48,10 +48,10 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.RightFriends
             showAnimation = new ThicknessAnimation(new Thickness(0, 0, -300, 0), new Thickness(0), new Duration(TimeSpan.FromSeconds(0.25)));
             hideAnimation = new ThicknessAnimation(new Thickness(0), new Thickness(0, 0, -300, 0), new Duration(TimeSpan.FromSeconds(0.25)));
 
-            _context.FriendList.Add(new RFriend("Marc Alexandre"));
-            _context.FriendList.Add(new RFriend("Hugo Menard", true, true));
-            _context.FriendList.Add(new RFriend("SamSam", false));
-            _context.FriendList.Add(new RFriend("Méowin", false));
+            _context.FriendList.Add(new Friend("Marc Alexandre"));
+            _context.FriendList.Add(new Friend("Hugo Menard", true, true));
+            _context.FriendList.Add(new Friend("SamSam", false));
+            _context.FriendList.Add(new Friend("Méowin", false));
         }
 
         public void Show()
