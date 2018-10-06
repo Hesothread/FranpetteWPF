@@ -20,9 +20,15 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
     /// </summary>
     public partial class TBar : UserControl
     {
+        private TBarDataContext _context = new TBarDataContext();
+
         public TBar()
         {
             InitializeComponent();
+            DataContext = _context;
+            
+            _context.CurrentLang = "Français";
+            _context.UserName = "ManuStrozor";
         }
     }
 }

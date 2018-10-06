@@ -6,40 +6,49 @@
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="650">
     <UserControl.Resources>
-        <Style x:Key="TopButton" TargetType="Button">
-            <Setter Property="OverridesDefaultStyle" Value="true"/>
-            <Setter Property="Margin" Value="10,0"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="Verdana"/>
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="{StaticResource Gray}"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
-                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Foreground" Value="{StaticResource White}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary Source="/Ressources/MenuResources.xaml"/>
     </UserControl.Resources>
-    <Grid Name="TBarGrid" Background="{StaticResource Black}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <Button Style="{StaticResource TopButton}" Grid.Column="0" Content="🌍 Français" ToolTip="Langues"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="2" Content="Mon compte ⯆"/>
-        <Button Style="{StaticResource TopButton}" Grid.Column="3" Content="Aide"/>
+    <Grid Background="{StaticResource Black}">
+        <Menu Background="Transparent" BorderThickness="0" Foreground="{StaticResource Gray}" VerticalAlignment="Center">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch" LastChildFill="False"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="{Binding CurrentLang}" DockPanel.Dock="Left" StaysOpenOnClick="True">
+                <MenuItem Header="English"/>
+                <MenuItem Header="Français"/>
+            </MenuItem>
+            <MenuItem Header="Aide" DockPanel.Dock="Right">
+                <MenuItem Header="Mise à jour"/>
+                <Separator/>
+                <MenuItem Header="Assistance"/>
+                <MenuItem Header="Remarques"/>
+            </MenuItem>
+            <MenuItem Header="Mon compte ⯆" DockPanel.Dock="Right">
+                <MenuItem Header="{Binding UserName}"/>
+                <Separator/>
+                <MenuItem Header="En ligne">
+                    <MenuItem.Icon>
+                        <Ellipse Fill="#00FF00" Height="12" Width="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Absent">
+                    <MenuItem.Icon>
+                        <Ellipse Fill="#FFB400" Height="12" Width="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Apparaître hors ligne">
+                    <MenuItem.Icon>
+                        <Ellipse Fill="Transparent" Height="12" Width="12" Stroke="#808e9b"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Voir le profil"/>
+                <MenuItem Header="Voir le compte"/>
+                <Separator/>
+                <MenuItem Header="Déconnexion"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </UserControl>
