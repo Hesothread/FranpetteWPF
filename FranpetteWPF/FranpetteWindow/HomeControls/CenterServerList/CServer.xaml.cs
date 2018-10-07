@@ -24,7 +24,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _serverIcon;
+        private string _serverIcon = "/Ressources/minecraft.jpg";
         public string ServerIcon
         {
             get { return _serverIcon; }
@@ -35,10 +35,59 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.CenterServerList
             }
         }
 
-        public CServer()
+        private string _serverName;
+        public string ServerName
+        {
+            get { return "Title : " + _serverName; }
+            private set
+            {
+                _serverName = value;
+                OnPropertyChanged("ServerName");
+            }
+        }
+
+        private bool _isStarted = false;
+        public bool IsStarted
+        {
+            get { return _isStarted; }
+            private set
+            {
+                _isStarted = value;
+                OnPropertyChanged("IsStarted");
+            }
+        }
+
+        private string _startedUserName;
+        public string StartedUserName
+        {
+            get { return "Last user : " + _startedUserName; }
+            private set
+            {
+                _startedUserName = value;
+                OnPropertyChanged("StartedUserName");
+            }
+        }
+
+        private string _startedIp;
+        public string StartedIP
+        {
+            get { return "Last ip : " + _startedIp; }
+            private set
+            {
+                _startedIp = value;
+                OnPropertyChanged("StartedIP");
+            }
+        }
+
+        public CServer(bool started = false, string name = "Inconnu", string user = "Inconnu", string ip = "Inconnu")
         {
             InitializeComponent();
             DataContext = this;
+
+            _isStarted = started;
+            _serverName = name;
+            _startedUserName = user;
+            _startedIp = ip;
         }
 
         protected void OnPropertyChanged(string name)

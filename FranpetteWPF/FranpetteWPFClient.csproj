@@ -177,6 +177,7 @@
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Ressources\minecraft.jpg" />
     <Resource Include="Ressources\password.png" />
     <Resource Include="Ressources\server.png" />
     <Resource Include="Ressources\user.png" />
