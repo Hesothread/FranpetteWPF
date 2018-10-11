@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWPFClient", "FranpetteWPF\FranpetteWPFClient.csproj", "{61A17D3E-17E0-4082-8FAF-FD1C007428A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWPFServer", "FranpetteWPFServer\FranpetteWPFServer.csproj", "{A188ED2F-82B8-4D6A-BC98-4182EE123A42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWCFServer", "FranpetteWCFServer\FranpetteWCFServer.csproj", "{0E13FDAE-7CF1-4665-88CE-184E318869EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{61A17D3E-17E0-4082-8FAF-FD1C007428A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A17D3E-17E0-4082-8FAF-FD1C007428A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61A17D3E-17E0-4082-8FAF-FD1C007428A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A188ED2F-82B8-4D6A-BC98-4182EE123A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A188ED2F-82B8-4D6A-BC98-4182EE123A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A188ED2F-82B8-4D6A-BC98-4182EE123A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A188ED2F-82B8-4D6A-BC98-4182EE123A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E13FDAE-7CF1-4665-88CE-184E318869EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E13FDAE-7CF1-4665-88CE-184E318869EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E13FDAE-7CF1-4665-88CE-184E318869EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E13FDAE-7CF1-4665-88CE-184E318869EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
