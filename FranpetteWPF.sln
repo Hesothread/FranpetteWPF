@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWPFClient", "FranpetteWPF\FranpetteWPFClient.csproj", "{61A17D3E-17E0-4082-8FAF-FD1C007428A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E13FDAE-7CF1-4665-88CE-184E318869EA} = {0E13FDAE-7CF1-4665-88CE-184E318869EA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWCFServer", "FranpetteWCFServer\FranpetteWCFServer.csproj", "{0E13FDAE-7CF1-4665-88CE-184E318869EA}"
 EndProject
