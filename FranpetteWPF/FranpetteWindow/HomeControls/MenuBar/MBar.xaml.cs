@@ -41,7 +41,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.MenuBar
 
         private void NewsBtn_Click(object sender, RoutedEventArgs e)
         {
-            GoToNews();
+            if (NewsUCEvent != null) NewsUCEvent.Invoke();
         }
 
         public void GoToServerList()
@@ -51,7 +51,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.MenuBar
 
         private void ServerListBtn_Click(object sender, RoutedEventArgs e)
         {
-            GoToServerList();
+            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
         }
 
         public void GoToOptions()
@@ -61,7 +61,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.MenuBar
 
         private void OptionsBtn_Click(object sender, RoutedEventArgs e)
         {
-            GoToOptions();
+            if (OptionsUCEvent != null) OptionsUCEvent.Invoke();
         }
 
         public void OpenFriends()
@@ -78,7 +78,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.MenuBar
             else
                 FriendsBtn.Content = "🞀 Amis";
 
-            OpenFriends();
+            if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
         }
     }
 }

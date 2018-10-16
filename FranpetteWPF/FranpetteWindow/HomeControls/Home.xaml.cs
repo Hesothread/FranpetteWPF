@@ -34,14 +34,22 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            _homeContext.CenterNews =       new CNews();
+            _homeContext.CenterNews = new CNews();
             _homeContext.CenterServerList = new CServerList();
-            _homeContext.CenterOptions =    new COptions();
+            _homeContext.CenterOptions = new COptions();
             _homeContext.HomeContent = _homeContext.CenterServerList;
+
+            UCTBar.OnProgressChange += UpdateProgress;
+
             UCMBar.NewsUCEvent += LoadCNews;
             UCMBar.ServerListUCEvent += LoadCServerList;
             UCMBar.OptionsUCEvent += LoadCOptions;
             UCMBar.FriendsUCEvent += ToogleRFriends;
+        }
+
+        private void UpdateProgress(int value)
+        {
+            UCBBar.progress1.Value = value;
         }
 
         private void LoadCNews()

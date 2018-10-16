@@ -24,6 +24,8 @@
                 <Separator/>
                 <MenuItem Header="Assistance"/>
                 <MenuItem Header="Remarques"/>
+                <MenuItem Name="test_upload" Header="Test upload" Click="test_upload_Click"/>
+                <MenuItem Name="test_download" Header="Test Download" Click="test_download_Click"/>
             </MenuItem>
             <MenuItem Header="Mon compte ⯆" DockPanel.Dock="Right">
                 <MenuItem Header="{Binding UserName}"/>

@@ -36,6 +36,7 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Style="{StaticResource BottomButton}" Content="{Binding CurrentVersion}" ToolTip="Version"/>
+        <ProgressBar Name="progress1" Grid.Column="1" Margin="8" Background="Transparent" BorderBrush="{StaticResource DarkGray}" BorderThickness="1,0,1,0"/>
         <Button Grid.Column="2" Style="{StaticResource BottomButton}" Content="Synchroniser" ToolTip="Synchronisation Local/Server"/>
     </Grid>
 </UserControl>

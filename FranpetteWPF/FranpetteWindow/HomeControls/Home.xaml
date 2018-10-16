@@ -20,10 +20,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <TopBar:TBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
+        <TopBar:TBar x:Name="UCTBar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
         <MenuBar:MBar x:Name="UCMBar" Grid.Row="1" Grid.Column="0" Height="70"/>
         <UserControl Grid.Row="2" Grid.Column="0" Content="{Binding HomeContent}"/>
         <RightFriends:RFriends x:Name="UCRFriends" Grid.Row="1" Grid.RowSpan="2"  Grid.Column="1" Width="300" Margin="{Binding RightMargin, ElementName=UCRFriends}"/>
-        <BottomBar:BBar Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
+        <BottomBar:BBar x:Name="UCBBar" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="30"/>
     </Grid>
 </UserControl>
