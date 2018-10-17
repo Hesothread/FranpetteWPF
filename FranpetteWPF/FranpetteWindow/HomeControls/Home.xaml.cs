@@ -47,9 +47,9 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls
             UCMBar.FriendsUCEvent += ToogleRFriends;
         }
 
-        private void UpdateProgress(int value)
+        private void UpdateProgress(int newVal)
         {
-            UCBBar.progress1.Value = value;
+            UCBBar.progress1.Value = newVal;
         }
 
         private void LoadCNews()
