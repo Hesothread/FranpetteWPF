@@ -4,14 +4,13 @@ using System.Net;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using Franpette.Sources.Network;
-using Franpette.Sources.Franpette;
+using FranpetteWPF.Managers.Tools;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Resources;
 using System.Globalization;
 
-namespace Franpette.Sources
+namespace FranpetteWPF.Managers.Network
 {
     class NetworkFTP : IFranpetteNetwork
     {

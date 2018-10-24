@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Franpette.Sources.Network
+namespace FranpetteWPF.Managers.Network
 {
     public enum ETarget
     {

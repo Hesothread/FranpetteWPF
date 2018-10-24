@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Franpette.Sources.Serialisation
+namespace FranpetteWPF.Managers.Serialisation
 {
     enum EInfo
     {

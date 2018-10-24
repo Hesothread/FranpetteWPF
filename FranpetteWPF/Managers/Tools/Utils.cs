@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,7 +8,7 @@ using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
-namespace Franpette.Sources.Franpette
+namespace FranpetteWPF.Managers.Tools
 {
     static class Utils
     {
@@ -127,16 +128,25 @@ namespace Franpette.Sources.Franpette
             }
         }
 
-        // Génère le md5sum d'un fichier
+        // Génère le checksum MD5 d'un fichier
         public static string getMd5(string filename)
         {
-            using (var md5 = MD5.Create())
+            using (FileStream stream = File.OpenRead(filename))
             {
-                using (var stream = File.OpenRead(filename))
-                {
-                    var hash = md5.ComputeHash(stream);
-                    return BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-                }
+                var md5 = MD5.Create();
+                byte[] hash = md5.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", String.Empty).ToLowerInvariant();
+            }
+        }
+
+        // Génère le checksum SHA256 d'un fichier
+        public static string getSha256(string filename)
+        {
+            using (FileStream stream = File.OpenRead(filename))
+            {
+                var sha = new SHA256Managed();
+                byte[] hash = sha.ComputeHash(stream);
+                return BitConverter.ToString(hash).Replace("-", String.Empty).ToLowerInvariant();
             }
         }
 
@@ -156,6 +166,30 @@ namespace Franpette.Sources.Franpette
                 files.Add(file.Substring(start, file.Length - start) + ";" + getMd5(file) + ";" + fi.Length);
             }
             return files.ToArray();
+        }
+
+        // Retourne la liste total des fichiers d'une arborescence de dossiers
+        public static string getJsonFilesInfo(string dir)
+        {
+            JObject files = new JObject();
+            foreach (string file in Directory.GetFiles(dir, "*", SearchOption.AllDirectories))
+            {
+                JProperty size = new JProperty("size", new FileInfo(file).Length);
+                JProperty hash = new JProperty("hash", getSha256(file));
+
+                JProperty filename = new JProperty(file, new JObject(size, hash));
+
+                files.Add(filename);
+            }
+
+            JProperty json = new JProperty("files", files);
+
+            return json.ToString();
+        }
+
+        public static void doSomething()
+        {
+            debug(getJsonFilesInfo(getRoot()));
         }
 
         // Vérifie si les identifiants sont corrects

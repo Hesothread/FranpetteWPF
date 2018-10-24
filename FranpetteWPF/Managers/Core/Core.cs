@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using Franpette.Sources.Network;
-using Franpette.Sources.Serialisation;
+using FranpetteWPF.Managers.Tools;
+using FranpetteWPF.Managers.Network;
+using FranpetteWPF.Managers.Serialisation;
 
-namespace Franpette.Sources.Franpette
+namespace FranpetteWPF.Managers.Core
 {
     public class Core
     {
