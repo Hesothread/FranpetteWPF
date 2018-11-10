@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace FranpetteWCFServer.Model
 {
     [DataContract]
-    public class Application
+    public class UserInfo
     {
     }
 }

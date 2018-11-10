@@ -15,20 +15,36 @@ namespace FranpetteWCFServer
         [OperationContract]
         string GetData(int value);
 
+        // Credential
+        [OperationContract] ServerInfo Connect(String Addresse);
+
+        [OperationContract] UserInfo LogIn(String Username, String Password);
+        [OperationContract] Boolean LogOut(String Message);
+
+        // User Service
+        [OperationContract] List<UserInfo> GetUserList();
+        [OperationContract] Boolean GetUserInfo(int UserId);
+        [OperationContract] Boolean SetUserInfo(UserInfo User);
+
+        [OperationContract] Boolean SendMessage(int UserId);
+
         // Server service
         [OperationContract] ServerInfo GetServerInfo();
+        [OperationContract] ServerInfo SetServerInfo(ServerInfo Server);
+
         [OperationContract] String GetWelcome();
         [OperationContract] void SetWelcome(String Message);
 
         // Application service
         [OperationContract] List<ApplicationInfo> GetApplicationList();
-
-        [OperationContract] ApplicationInfo GetApplicationInfo(String Name);
         [OperationContract] ApplicationInfo GetApplicationInfo(int Id);
         [OperationContract] ApplicationInfo SetApplicationInfo(ApplicationInfo Application);
 
-        [OperationContract] ApplicationInfo ApplicationStarted(int Id);
-        [OperationContract] ApplicationInfo ApplicationStoped(int Id);
+        [OperationContract] ApplicationInfo AddApplication(ApplicationInfo Application);
+        [OperationContract] Boolean RemoveApplication(int Id);
+
+        [OperationContract] ApplicationInfo ApplicationStarted(int Id, int UserId);
+        [OperationContract] ApplicationInfo ApplicationStoped(int Id, int UserId);
 
        
 
