@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FranpetteLib.Serialisation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 

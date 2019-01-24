@@ -46,9 +46,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,6 +61,12 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFLocalizeExtension, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFLocalizeExtension.3.3.1\lib\net452\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XAMLMarkupExtensions.1.5.1\lib\net452\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -129,9 +135,13 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="FranpetteWindow\LoginControls\LoginDataContext.cs" />
-    <Compile Include="Managers\FranpetteManager.cs" />
-    <Compile Include="Managers\Network\NetworkClient.cs" />
-    <Compile Include="OLD\XMLInfoSerialisation.cs" />
+    <None Include="OLD\FranpetteManager.cs" />
+    <None Include="OLD\Network\NetworkClient.cs" />
+    <None Include="OLD\XMLInfoSerialisation.cs" />
+    <None Include="OLD\Utils.cs" />
+    <None Include="Network\NetworkClient.cs" />
+    <None Include="Network\NetworkFTP.cs" />
+    <Compile Include="Network\FranpetteDaemon.cs" />
     <Compile Include="Ressources\Lang\Lang.Designer.cs" />
     <Compile Include="Ressources\Lang\Lang.en-US.Designer.cs" />
     <Compile Include="Ressources\Lang\Lang.es.Designer.cs" />
@@ -143,9 +153,9 @@
     <Compile Include="FranpetteWindow\FranpetteDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OLD\Core\Core.cs" />
-    <Compile Include="Managers\Network\IFranpetteNetwork.cs" />
-    <Compile Include="Managers\Network\NetworkFTP.cs" />
+    <None Include="OLD\Core\Core.cs" />
+    <None Include="OLD\Network\IFranpetteNetwork.cs" />
+    <None Include="OLD\Network\NetworkFTP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -179,6 +189,8 @@
   <ItemGroup>
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FChat\" />
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
+    <Folder Include="Network\Action\" />
+    <Folder Include="Network\Command\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Ressources\Image\minecraft.jpg" />
@@ -264,6 +276,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FranpetteLib\FranpetteLib.csproj">
+      <Project>{86a0cece-62ce-4648-a5ef-35417c75b2cb}</Project>
+      <Name>FranpetteLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

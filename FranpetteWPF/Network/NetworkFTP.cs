@@ -3,10 +3,7 @@ using System.IO;
 using System.Net;
 using System.Diagnostics;
 using System.Drawing;
-using System.Windows.Forms;
-using FranpetteWPF.Managers.Tools;
 using System.ComponentModel;
-using System.Collections.Generic;
 using System.Resources;
 using System.Globalization;
 
@@ -15,7 +12,7 @@ namespace FranpetteWPF.Managers.Network
     class NetworkFTP : IFranpetteNetwork
     {
         private Stopwatch       _sw;
-        private Label           _progress;
+        private string           _progress;
         private Font            _font;
         private PointF          _textPos;
         

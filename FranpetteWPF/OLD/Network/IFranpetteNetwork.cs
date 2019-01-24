@@ -3,12 +3,6 @@ using System.ComponentModel;
 
 namespace FranpetteWPF.Managers.Network
 {
-    public enum ETarget
-    {
-        FRANPETTE,
-        MINECRAFT
-    }
-    
     interface IFranpetteNetwork
     {
         Boolean connect(String address);

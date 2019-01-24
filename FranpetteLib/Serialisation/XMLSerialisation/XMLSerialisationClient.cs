@@ -7,22 +7,16 @@ namespace FranpetteLib.Serialisation.XMLSerialisation
 {
     class XMLSerialisationClient : ISerialisation
     {
-        private String _path;
-
-        public XMLSerialisationClient(String path)
-        {
-            _path = path;
-        }
-        public String GetFObjectType()
+        public String GetFType()
         {
             return "FClient";
         }
 
-        public void Serialise(IFranpetteObject fobject)
+        public void Serialise(IFranpetteObject fobject, String path)
         {
 
         }
-        public IFranpetteObject Deserialise()
+        public IFranpetteObject Deserialise(String path)
         {
             return new FClient();
         }

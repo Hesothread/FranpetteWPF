@@ -9,23 +9,23 @@ namespace FranpetteLib.Serialisation.XMLSerialisation
     {
         private String _name;
         private String _path;
+        public string Path { get => _path; set => _path = value; }
 
         public XMLSerialisationApplication(String path, string name)
         {
-            _path = path;
+            Path = path;
             _name = name;
         }
 
-        public String GetFObjectType()
+        public String GetFType()
         {
             return "FApplication_" + _name;
         }
 
-        public void Serialise(IFranpetteObject fobject)
+        public void Serialise(IFranpetteObject fobject, String path)
         {
-
         }
-        public IFranpetteObject Deserialise()
+        public IFranpetteObject Deserialise(String path)
         {
             return new FApplication();
         }

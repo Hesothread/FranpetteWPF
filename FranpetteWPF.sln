@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteWPFClient", "FranpetteWPF\FranpetteWPFClient.csproj", "{61A17D3E-17E0-4082-8FAF-FD1C007428A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteLib", "FranpetteLib\FranpetteLib.csproj", "{86A0CECE-62CE-4648-A5EF-35417C75B2CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FranpetteLib", "FranpetteLib\FranpetteLib.csproj", "{86A0CECE-62CE-4648-A5EF-35417C75B2CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

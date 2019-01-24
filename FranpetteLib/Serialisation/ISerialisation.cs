@@ -6,9 +6,9 @@ namespace FranpetteLib.Serialisation
 {
     public interface ISerialisation
     {
-        String GetFObjectType();
+        String GetFType();
 
-        void Serialise(IFranpetteObject fobject);
-        IFranpetteObject Deserialise();
+        void Serialise(IFranpetteObject fobject, String path);
+        IFranpetteObject Deserialise(String path);
     }
 }

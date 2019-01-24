@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FranpetteWPF.Managers.Tools;
 
 namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
 {
@@ -70,7 +69,7 @@ namespace FranpetteWPF.FranpetteWindow.HomeControls.TopBar
 
         private void test_utils_Click(object sender, RoutedEventArgs e)
         {
-            Utils.doSomething();
+
         }
     }
 }

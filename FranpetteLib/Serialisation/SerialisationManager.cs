@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FranpetteLib.Serialisation
 {
-    public class SerialisationManager
+    public class SerialisationFileManager
     {
         Dictionary<String, ISerialisation> _SerialisationList = new Dictionary<string, ISerialisation>();
 
@@ -13,7 +13,7 @@ namespace FranpetteLib.Serialisation
         {
             if (serialisation == null)
                 return;
-            String ftype = serialisation.GetFObjectType();
+            String ftype = serialisation.GetFType();
 
             if (!_SerialisationList.ContainsKey(ftype))
                 _SerialisationList.Add(ftype, serialisation);
@@ -30,34 +30,34 @@ namespace FranpetteLib.Serialisation
             return null;
         }
         
-        public void Serialisation(IFranpetteObject fobject)
+        public void Serialisation(IFranpetteObject fobject, String path)
         {
             if (fobject == null)
                 return;
             String ftype = fobject.GetFType();
-
+        
             if (_SerialisationList.ContainsKey(ftype))
-                _SerialisationList[ftype].Serialise(fobject);
+                _SerialisationList[ftype].Serialise(fobject, path);
         }
-        public void ForceSerialisation(IFranpetteObject fobject, String ftype)
+        public void ForceSerialisation(IFranpetteObject fobject, String path, String ftype)
         {
             if (fobject != null && ftype != null && _SerialisationList.ContainsKey(ftype))
-                _SerialisationList[ftype].Serialise(fobject);
+                _SerialisationList[ftype].Serialise(fobject, path);
         }
-        public IFranpetteObject Deserialisation(String ftype)
+        public IFranpetteObject Deserialisation(String ftype, String path)
         {
             if (ftype != null && _SerialisationList.ContainsKey(ftype))
-                return _SerialisationList[ftype].Deserialise();
+                return _SerialisationList[ftype].Deserialise(path);
             return null;
         }
-        public IFranpetteObject Deserialisation(IFranpetteObject fobject)
+        public IFranpetteObject Deserialisation(IFranpetteObject fobject, String path)
         {
             if (fobject == null)
                 return null;
             String ftype = fobject.GetFType();
 
             if (_SerialisationList.ContainsKey(ftype))
-                return _SerialisationList[ftype].Deserialise();
+                return _SerialisationList[ftype].Deserialise(path);
             return null;
         }
     }
