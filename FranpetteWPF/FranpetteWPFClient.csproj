@@ -139,7 +139,7 @@
     <None Include="OLD\Network\NetworkClient.cs" />
     <None Include="OLD\XMLInfoSerialisation.cs" />
     <None Include="OLD\Utils.cs" />
-    <None Include="Network\NetworkClient.cs" />
+    <Compile Include="Network\NetworkClient.cs" />
     <None Include="Network\NetworkFTP.cs" />
     <Compile Include="Network\FranpetteDaemon.cs" />
     <Compile Include="Ressources\Lang\Lang.Designer.cs" />
@@ -189,8 +189,6 @@
   <ItemGroup>
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FChat\" />
     <Folder Include="FranpetteWindow\HomeControls\RightFriends\FriendsList\" />
-    <Folder Include="Network\Action\" />
-    <Folder Include="Network\Command\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Ressources\Image\minecraft.jpg" />

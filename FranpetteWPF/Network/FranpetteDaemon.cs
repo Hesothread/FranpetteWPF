@@ -9,38 +9,59 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 
-namespace FranpetteWPF.Network
+namespace FranpetteWPFClient.Network
 {
-    class FranpetteDaemon
+    public enum EResponsePacket
+    {
+        SERV_CONECTED,
+        SERV_DISCONECTED,
+
+        USER_PING,
+        USER_LOGED,
+        USER_DISCONNECTED,
+
+    }
+
+    public class FranpetteDaemon
     {
         private Thread _thread;
         private FClient _client;
         private Dispatcher _fdispatcher;
         private string _rmessage;
-        private string _smessage;
+        private Boolean _done = true;
 
-        public void StartDaemon(FClient client)
+        public bool isDone { get => _done; private set => _done = value; }
+
+        public Boolean StartDaemon(FClient client)
         {
+            if (_done == false)
+                return false;
             _fdispatcher = Dispatcher.CurrentDispatcher;
             _client = client;
-            Task.Factory.StartNew(FDaemon);
+            Task.Factory.StartNew(() => FDaemon(client));
+            return true;
+        }
+        public void StopDaemon()
+        {
+            if (_done == true)
+                return;
+            _fdispatcher = null;
+            _client = null;
+            _done = true;
         }
 
-        private void FDaemon()
+        private void FDaemon(FClient client)
         {
-            String addresse = "Hesothread.com";
-            int port = 4242;
-            UdpClient udpClient = new UdpClient(port);
+            UdpClient udpClient = new UdpClient(client.ServerPort);
 
             try
             {
-                IPAddress[] addressesIP = Dns.GetHostAddresses(addresse);
-                IPEndPoint groupEP = new IPEndPoint(addressesIP[0], port);
+                IPAddress[] addressesIP = Dns.GetHostAddresses(client.ServerAddress);
+                IPEndPoint groupEP = new IPEndPoint(addressesIP[0], client.ServerPort);
 
-                udpClient.Connect(addresse, port);
+                udpClient.Connect(client.ServerAddress, client.ServerPort);
 
-                bool done = false;
-                while (!done)
+                while (!_done)
                 {
                     byte[] pdata = udpClient.Receive(ref groupEP);
                     string _rmessage = Encoding.ASCII.GetString(pdata);
@@ -55,7 +76,7 @@ namespace FranpetteWPF.Network
 
         private void MessageRecieve(string rawData)
         {
-            if (!_fdispatcher.CheckAccess())
+            /*if (!_fdispatcher.CheckAccess())
             {
                 _fdispatcher.BeginInvoke(DispatcherPriority.Normal, () => { MessageRecieve(rawData); });
                 return;
@@ -74,7 +95,7 @@ namespace FranpetteWPF.Network
                 case enum logged
                 case enum logged
                 case enum logged
-            }
+            }*/
         }
     }
 }

@@ -8,6 +8,27 @@ namespace FranpetteLib.Model
 {
     public class FClient : AFranpetteObject
     {
+        private String _serverAddress;
+        public String ServerAddress
+        {
+            get { return _serverAddress; }
+            set
+            {
+                _serverAddress = value;
+                OnPropertyChanged("ServerAddress");
+            }
+        }
+        private int _serverPort;
+        public int ServerPort
+        {
+            get { return _serverPort; }
+            set
+            {
+                _serverPort = value;
+                OnPropertyChanged("ServerPort");
+            }
+        }
+
         private String _news;
         public String News
         {

@@ -38,14 +38,14 @@ namespace FranpetteLib.Model
                 OnPropertyChanged("Description");
             }
         }
-        private List<FUser> _friendsList;
-        public List<FUser> FriendsList
+        private String _ip;
+        public String Ip
         {
-            get { return _friendsList; }
+            get { return _ip; }
             set
             {
-                _friendsList = value;
-                OnPropertyChanged("FriendsList");
+                _ip = value;
+                OnPropertyChanged("Ip");
             }
         }
 
