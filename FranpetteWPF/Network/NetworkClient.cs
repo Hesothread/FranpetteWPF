@@ -72,7 +72,7 @@ namespace FranpetteWPFClient.Network
 
         private Boolean StartDaemon()
         {
-            if (_daemon != null)
+            if (_daemon == null)
             {
                 _daemon = new FranpetteDaemon();
                 if (!_daemon.isDone)

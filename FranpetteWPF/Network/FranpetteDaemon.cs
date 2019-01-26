@@ -65,6 +65,7 @@ namespace FranpetteWPFClient.Network
                 {
                     byte[] pdata = udpClient.Receive(ref groupEP);
                     string _rmessage = Encoding.ASCII.GetString(pdata);
+                    Console.WriteLine(_rmessage);
                     MessageRecieve(_rmessage);
                 }
             }

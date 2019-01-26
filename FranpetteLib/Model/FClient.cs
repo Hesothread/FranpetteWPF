@@ -123,26 +123,6 @@ namespace FranpetteLib.Model
                 OnPropertyChanged("ServerVersion");
             }
         }
-        private String _serverAddress;
-        public String ServerAddress
-        {
-            get { return _serverAddress; }
-            set
-            {
-                _serverAddress = value;
-                OnPropertyChanged("ServerAddress");
-            }
-        }
-        private int _serverPort;
-        public int ServerPort
-        {
-            get { return _serverPort; }
-            set
-            {
-                _serverPort = value;
-                OnPropertyChanged("ServerPort");
-            }
-        }
 
         private List<FApplication> _applicationsList;
         public List<FApplication> ApplicationsList
