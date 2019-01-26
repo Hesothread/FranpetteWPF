@@ -32,13 +32,14 @@ namespace FranpetteWPFClient.Network
 
         public bool isDone { get => _done; private set => _done = value; }
 
-        public Boolean StartDaemon(FClient client)
+        public Boolean StartDaemon(FClient client, UdpClient udpClient)
         {
             if (_done == false)
                 return false;
             _fdispatcher = Dispatcher.CurrentDispatcher;
             _client = client;
-            Task.Factory.StartNew(() => FDaemon(client));
+            Task.Factory.StartNew(() => FDaemon(client, udpClient));
+            _done = false;
             return true;
         }
         public void StopDaemon()
@@ -50,17 +51,13 @@ namespace FranpetteWPFClient.Network
             _done = true;
         }
 
-        private void FDaemon(FClient client)
+        private void FDaemon(FClient client, UdpClient udpClient)
         {
-            UdpClient udpClient = new UdpClient(client.ServerPort);
-
             try
             {
                 IPAddress[] addressesIP = Dns.GetHostAddresses(client.ServerAddress);
                 IPEndPoint groupEP = new IPEndPoint(addressesIP[0], client.ServerPort);
-
-                udpClient.Connect(client.ServerAddress, client.ServerPort);
-
+                
                 while (!_done)
                 {
                     byte[] pdata = udpClient.Receive(ref groupEP);

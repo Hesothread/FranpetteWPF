@@ -49,16 +49,16 @@ namespace FranpetteWPFClient.Network
                 _client.ServerPort = port;
                 _client.Ip = new WebClient().DownloadString("http://icanhazip.com");
 
+                _udpClient = new UdpClient(port);
+                IPAddress[] addressesIP = Dns.GetHostAddresses(address);
+                IPEndPoint groupEP = new IPEndPoint(addressesIP[0], port);
+                _udpClient.Connect(address, port);
                 if (!StartDaemon())
                 {
                     Disconnect();
                     return _client;
                 }
 
-                _udpClient = new UdpClient(port);
-                IPAddress[] addressesIP = Dns.GetHostAddresses(address);
-                IPEndPoint groupEP = new IPEndPoint(addressesIP[0], port);
-                _udpClient.Connect(address, port);
                 sendMessage(ERequestPacket.SERV_CONECT.ToString() + SEPARATOR + _client.LocalVersion);
             }
             catch (Exception e)
@@ -78,7 +78,7 @@ namespace FranpetteWPFClient.Network
                 if (!_daemon.isDone)
                     return false;
             }
-            if (_daemon.StartDaemon(_client))
+            if (_daemon.StartDaemon(_client, _udpClient))
                 return true;
             return false;
         }
