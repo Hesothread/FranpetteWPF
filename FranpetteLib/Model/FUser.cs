@@ -38,16 +38,6 @@ namespace FranpetteLib.Model
                 OnPropertyChanged("Description");
             }
         }
-        private List<FUser> _friendsList;
-        public List<FUser> FriendsList
-        {
-            get { return _friendsList; }
-            set
-            {
-                _friendsList = value;
-                OnPropertyChanged("FriendsList");
-            }
-        }
 
         public override String GetFType()
         {
