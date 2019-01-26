@@ -9,7 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FranpetteWPFClient.Network
+namespace FranpetteServer
 {
     public class NetworkClient
     {
