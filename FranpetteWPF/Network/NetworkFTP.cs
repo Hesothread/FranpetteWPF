@@ -7,9 +7,9 @@ using System.ComponentModel;
 using System.Resources;
 using System.Globalization;
 
-namespace FranpetteWPF.Managers.Network
+namespace FranpetteWPFClient.Network
 {
-    class NetworkFTP : IFranpetteNetwork
+    class NetworkFTP
     {
         private Stopwatch       _sw;
         private string           _progress;
@@ -29,19 +29,6 @@ namespace FranpetteWPF.Managers.Network
             _progress = null; //ToDo
             _font = new Font("Lucida Sans Unicode", 9F, FontStyle.Regular);
             _textPos = new PointF(0, 0);
-        }
-
-        public Boolean connect(string address)
-        {
-            _address = address;
-            return true;
-        }
-
-        public Boolean login(string login, string password)
-        {
-            _login = login;
-            _password = password;
-            return true;
         }
 
         // Actions depuis le serveur
@@ -144,8 +131,8 @@ namespace FranpetteWPF.Managers.Network
         {
             FtpWebRequest request = requestMethod(src, WebRequestMethods.Ftp.DownloadFile);
 
-            int total = requestSize(src, request);
-            _sw.Reset();
+            //int total = requestSize(src, request);
+            //_sw.Reset();
             try
             {
                 using (Stream ftpStream = request.GetResponse().GetResponseStream())
@@ -153,20 +140,20 @@ namespace FranpetteWPF.Managers.Network
                 {
                     byte[] buffer = new byte[102400];
                     int read;
-                    _sw.Start();
-                    Utils.debug("[NetworkFTP] ftpDownload : ...downloading " + dest);
+                    //_sw.Start();
+                    //Utils.debug("[NetworkFTP] ftpDownload : ...downloading " + dest);
                     while ((read = ftpStream.Read(buffer, 0, buffer.Length)) > 0)
                     {
                         fileStream.Write(buffer, 0, read);
-                        printProgressInfo(dest, fileStream.Position, total);
+                        //printProgressInfo(dest, fileStream.Position, total);
                     }
-                    _sw.Stop();
-                    Utils.debug("[NetworkFTP] ftpDownload : " + dest + " downloaded !");
+                    //_sw.Stop();
+                    //Utils.debug("[NetworkFTP] ftpDownload : " + dest + " downloaded !");
                 }
             }
             catch (WebException e)
             {
-                Utils.debug("[NetworkFTP] ftpDownload : " + e.Message);
+                //Utils.debug("[NetworkFTP] ftpDownload : " + e.Message);
             }
         }
 
@@ -195,7 +182,7 @@ namespace FranpetteWPF.Managers.Network
         }
 
         // Téléchargement des fichiers
-        public void filesToDownload(string server, string local, BackgroundWorker worker)
+        public List<String> GetFilesToDownload(string serverJson, string localJson)
         {
             string[] localFiles = File.ReadAllLines(local);
             string[] serverFiles = File.ReadAllLines(server);
@@ -263,7 +250,7 @@ namespace FranpetteWPF.Managers.Network
         }
 
         // Upload des fichiers
-        public void filesToUpload(string local, string server, BackgroundWorker worker)
+        public List<String> GetFilesToUpload(string localJson, string serverJson)
         {
             string[] localFiles = File.ReadAllLines(server);
             string[] serverFiles = File.ReadAllLines(local);

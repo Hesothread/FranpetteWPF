@@ -1,6 +1,8 @@
 ﻿using FranpetteLib.Model;
+using FranpetteLib.JsonManager;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -207,6 +209,34 @@ namespace FranpetteWPFClient.Network
         {
             if (_daemon == null || _daemon.isDone || _udpClient == null || _client.CurrentUser == null)
                 return;
+
+            String localStream = Json.GetStream(localPath);
+            //String serverStream = Json.GetStream(application.Path); A faire coté serveur !
+
+            foreach (var elem in Json.MissingFiles(localStream, serverStream))
+            {
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://" + serverAddress + "/" + elem.Item2);
+                request.Credentials = new NetworkCredential(login, password);
+                request.Method = WebRequestMethods.Ftp.DownloadFile;
+
+                try
+                {
+                    using (Stream ftpStream = request.GetResponse().GetResponseStream())
+                    using (Stream fileStream = File.Create(elem.Item1))
+                    {
+                        byte[] buffer = new byte[102400];
+                        int read;
+                        while ((read = ftpStream.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            fileStream.Write(buffer, 0, read);
+                        }
+                    }
+                }
+                catch (WebException e)
+                {
+                    return;
+                }
+            }
 
             return;
         }
