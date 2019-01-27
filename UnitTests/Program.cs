@@ -1,7 +1,7 @@
 ﻿using FranpetteLib.Model;
 using FranpetteLib.Serialisation.XMLSerialisation;
 using FranpetteLib.JsonManager;
-using FranpetteWPFClient.Network;
+using FranpetteClient.Network;
 using System;
 using System.Collections.Generic;
 using System.IO;
