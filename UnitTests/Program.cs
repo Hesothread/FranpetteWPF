@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace UnitTests
@@ -23,6 +24,7 @@ namespace UnitTests
             //nclient.GetApplicationsList();
 
             Console.ReadLine();
+            Thread.Sleep(20000);
         }
     }
 }

@@ -8,28 +8,25 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Threading;
 
-namespace FranpetteWPFClient.Network
+namespace FranpetteServer
 {
     public class FranpetteDaemon
     {
         public char SEPARATOR = ':';
         
         private FClient _client;
-        private Dispatcher _fdispatcher;
         private string _rmessage;
         private Boolean _done = true;
 
         public bool isDone { get => _done; private set => _done = value; }
 
-        public Boolean StartDaemon(FClient client, UdpClient udpClient)
+        public Boolean StartDaemon()
         {
             if (_done == false)
                 return false;
-            _fdispatcher = Dispatcher.CurrentDispatcher;
             _client = client;
-            Task.Factory.StartNew(() => FDaemon(client, udpClient));
+            FDaemon(client, new UdpClient());
             _done = false;
             return true;
         }

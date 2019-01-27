@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FranpetteLib", "FranpetteLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{98257126-3FD2-4D03-863C-81ABCBD4C24C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FranpetteServer", "FranpetteServer\FranpetteServer.csproj", "{C84D016C-3A47-40EB-8B90-9DF3B252BCCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{98257126-3FD2-4D03-863C-81ABCBD4C24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98257126-3FD2-4D03-863C-81ABCBD4C24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98257126-3FD2-4D03-863C-81ABCBD4C24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84D016C-3A47-40EB-8B90-9DF3B252BCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84D016C-3A47-40EB-8B90-9DF3B252BCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84D016C-3A47-40EB-8B90-9DF3B252BCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84D016C-3A47-40EB-8B90-9DF3B252BCCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

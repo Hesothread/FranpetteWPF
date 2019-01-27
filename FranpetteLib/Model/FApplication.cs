@@ -6,16 +6,6 @@ namespace FranpetteLib.Model
 {
     public class FApplication : AFranpetteObject
     {
-        private EConnectionState _connectionState;
-        public EConnectionState ConnectionState
-        {
-            get { return _connectionState; }
-            set
-            {
-                _connectionState = value;
-                OnPropertyChanged("ConnectionState");
-            }
-        }
         private String _description;
         public String Description
         {
@@ -24,6 +14,16 @@ namespace FranpetteLib.Model
             {
                 _description = value;
                 OnPropertyChanged("Description");
+            }
+        }
+        private EConnectionState _connectionState;
+        public EConnectionState ConnectionState
+        {
+            get { return _connectionState; }
+            set
+            {
+                _connectionState = value;
+                OnPropertyChanged("ConnectionState");
             }
         }
         private FUser _startedUser;
