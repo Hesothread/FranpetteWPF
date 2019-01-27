@@ -202,6 +202,11 @@ namespace FranpetteClient.Network
 
             String localStream = Json.GetStream(localPath);
             //String serverStream = Json.GetStream(application.Path); A faire coté serveur !
+            String serverStream = null;
+
+            String serverAddress = "127.0.0.1";
+            String login = "";
+            String password = "";
 
             foreach (var elem in Json.MissingFiles(localStream, serverStream))
             {

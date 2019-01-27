@@ -214,7 +214,6 @@
     <Resource Include="Ressources\Image\franpette.png" />
     <Resource Include="Ressources\Image\chat.png" />
     <Resource Include="franpette.ico" />
-    <Content Include="Ressources\franpette.svg" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="FranpetteWindow\Franpette.xaml">
@@ -307,6 +306,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ressources\Image\franpette.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

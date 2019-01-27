@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FranpetteClient\FranpetteClient.csproj">
+      <Project>{61a17d3e-17e0-4082-8faf-fd1c007428a0}</Project>
+      <Name>FranpetteClient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FranpetteLib\FranpetteLib.csproj">
       <Project>{86a0cece-62ce-4648-a5ef-35417c75b2cb}</Project>
       <Name>FranpetteLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FranpetteWPF\FranpetteClient.csproj">
-      <Project>{61a17d3e-17e0-4082-8faf-fd1c007428a0}</Project>
-      <Name>FranpetteClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

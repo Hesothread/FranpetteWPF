@@ -48,12 +48,12 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Grid.ColumnSpan="4" Fill="{StaticResource Black}" Height="30"/>
-        
-        <Image Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Source="/Ressources/franpette-logo.png"/>
 
-        <Image Style="{StaticResource Icon}" Grid.Row="4" Grid.Column="1" Source="/Ressources/user.png"/>
-        <Image Style="{StaticResource Icon}" Grid.Row="5" Grid.Column="1" Source="/Ressources/password.png"/>
-        <Image Style="{StaticResource Icon}" Grid.Row="6" Grid.Column="1" Source="/Ressources/server.png"/>
+        <Image Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Source="FranpetteClient/Ressources/Image/franpette-logo.png"/>
+
+        <Image Style="{StaticResource Icon}" Grid.Row="4" Grid.Column="1" Source="FranpetteClient/Ressources/Image/user.png"/>
+        <Image Style="{StaticResource Icon}" Grid.Row="5" Grid.Column="1" Source="FranpetteClient/Ressources/Image/password.png"/>
+        <Image Style="{StaticResource Icon}" Grid.Row="6" Grid.Column="1" Source="FranpetteClient/Ressources/Image/server.png"/>
         
         <TextBox Style="{StaticResource Field}" Grid.Row="4" Grid.Column="2" Text="{StaticResource lang_username}"/>
         <PasswordBox Style="{StaticResource Field}" Grid.Row="5" Grid.Column="2" x:Name="UserPassword" AutomationProperties.HelpText="ggsdfgs"/>
