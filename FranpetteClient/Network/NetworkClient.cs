@@ -79,8 +79,7 @@ namespace FranpetteClient.Network
             _daemon = null;
             _udpClient = null;
         }
-
-
+        
         private void sendMessage(String message)
         {
             Byte[] sendBytes = Encoding.ASCII.GetBytes(message);
@@ -199,10 +198,11 @@ namespace FranpetteClient.Network
         {
             if (_daemon == null || _daemon.isDone || _udpClient == null || _client.CurrentUser == null)
                 return;
-
+            FranpetteDaemon._semaphore.WaitOne();
+            sendMessage(ERequestPacket.APPLICATION_GETHEADER.ToString() + SEPARATOR + _client.CurrentUser.Id + SEPARATOR + application.Id);
+            FranpetteDaemon._semaphore.WaitOne();
             String localStream = Json.GetStream(localPath);
-            //String serverStream = Json.GetStream(application.Path); A faire coté serveur !
-            String serverStream = null;
+            String serverStream = _daemon._rmessage;
 
             String serverAddress = "127.0.0.1";
             String login = "";

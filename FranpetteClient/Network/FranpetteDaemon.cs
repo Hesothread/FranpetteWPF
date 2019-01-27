@@ -14,13 +14,15 @@ namespace FranpetteClient.Network
 {
     public class FranpetteDaemon
     {
+        public static Semaphore _semaphore { get; set; }
+
         public char SEPARATOR = ':';
         
         private FClient _client;
         private Dispatcher _fdispatcher;
-        private string _rmessage;
-        private Boolean _done = true;
+        public string _rmessage;
 
+        private Boolean _done = true;
         public bool isDone { get => _done; private set => _done = value; }
 
         public Boolean StartDaemon(FClient client, UdpClient udpClient)
@@ -29,6 +31,7 @@ namespace FranpetteClient.Network
                 return false;
             _fdispatcher = Dispatcher.CurrentDispatcher;
             _client = client;
+            _semaphore = new Semaphore(1,1);
             Task.Factory.StartNew(() => FDaemon(client, udpClient));
             _done = false;
             return true;
@@ -103,6 +106,9 @@ namespace FranpetteClient.Network
                     break;
                 case EResponsePacket.SERVER_INFO:
                     MsgServerInfo(rawsData);
+                    break;
+                case EResponsePacket.APPLICTION_HEADER:
+                    MsgApplicationHeader(rawsData);
                     break;
                 case EResponsePacket.SERVER_ERROR:
                     MsgServerError(rawsData);
@@ -261,6 +267,12 @@ namespace FranpetteClient.Network
             _client.Name = datas[1];
             _client.News = datas[2];
             _client.ServerVersion = datas[4];
+        }
+        public void MsgApplicationHeader(String[] datas)
+        {
+            if (datas == null || datas.Count() != 5)
+                return;
+            _rmessage = datas[1];
         }
         public void MsgServerError(String[] datas)
         {

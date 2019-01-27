@@ -9,22 +9,71 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using FranpetteLib.Network;
+using System.Net;
+using System.Net.Sockets;
 
 namespace UnitTests
 {
     class Program
     {
+        public char SEPARATOR = ':';
+
         static void Main(string[] args)
         {
             //FClient client = XMLSerialisation.Serialise("franpette.xml");
-            //NetworkClient nclient = new NetworkClient();
-
-            //FClient client = nclient.Connect("82.243.249.234", 4242);
-            //nclient.Login("plop", "totito");
-            //nclient.GetApplicationsList();
 
             Console.ReadLine();
-            Thread.Sleep(20000);
+        }
+
+        void deshtros()
+        {
+            NetworkClient nclient = new NetworkClient();
+
+            FClient client = nclient.Connect("82.243.249.234", 4245);
+            nclient.Login("plop", "totito");
+        }
+
+        UdpClient _udpClient;
+
+        void manustrozor()
+        {
+            int port = 4245;
+            String address = "86.238.58.47";
+            FClient client = new FClient();
+            client.ServerAddress = address;
+            client.ServerPort = port;
+            client.Ip = new WebClient().DownloadString("http://icanhazip.com");
+
+            _udpClient = new UdpClient(port);
+            IPAddress[] addressesIP = Dns.GetHostAddresses(address);
+            IPEndPoint groupEP = new IPEndPoint(addressesIP[0], port);
+            _udpClient.Connect(address, port);
+
+
+            Console.WriteLine("Send msg 1");
+            sendMessage(EResponsePacket.SERV_CONECTED.ToString() + SEPARATOR + "Toto");
+            Console.ReadLine();
+            Console.WriteLine("Send msg 2");
+            sendMessage(EResponsePacket.AUTH_CONNECT.ToString() + SEPARATOR + 42);
+            Console.ReadLine();
+            Console.WriteLine("Send msg 3");
+            sendMessage(EResponsePacket.APPLICTION_HEADER.ToString() + SEPARATOR + /*JSON*/);
+            Console.ReadLine();
+        }
+
+
+        private void sendMessage(String message)
+        {
+            Byte[] sendBytes = Encoding.ASCII.GetBytes(message);
+            try
+            {
+                _udpClient.Send(sendBytes, sendBytes.Length);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }
