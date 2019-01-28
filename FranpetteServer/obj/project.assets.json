@@ -538,10 +538,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -697,10 +698,11 @@
       ]
     },
     "Newtonsoft.Json/12.0.1": {
-      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
       "type": "package",
       "path": "newtonsoft.json/12.0.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
@@ -747,23 +749,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\desht\\.nuget\\packages\\": {},
+    "C:\\Users\\Emmanuel\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projet\\Hesothread\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
+      "projectUniqueName": "D:\\Documents\\Github\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
       "projectName": "FranpetteServer",
-      "projectPath": "D:\\Projet\\Hesothread\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
-      "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
-      "outputPath": "D:\\Projet\\Hesothread\\FranpetteWPF\\FranpetteServer\\obj\\",
+      "projectPath": "D:\\Documents\\Github\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
+      "packagesPath": "C:\\Users\\Emmanuel\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\Github\\FranpetteWPF\\FranpetteServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Emmanuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -776,8 +778,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Projet\\Hesothread\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj": {
-              "projectPath": "D:\\Projet\\Hesothread\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj"
+            "D:\\Documents\\Github\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj": {
+              "projectPath": "D:\\Documents\\Github\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj"
             }
           }
         }
@@ -792,6 +794,7 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

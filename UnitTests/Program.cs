@@ -60,6 +60,7 @@ namespace UnitTests
             sendMessage(EResponsePacket.AUTH_CONNECT.ToString() + SEPARATOR + 42);
             Console.ReadLine();
             Console.WriteLine("Send msg 3");
+            sendMessage(EResponsePacket.APPLICTION_HEADER.ToString() + SEPARATOR + Json.GetStream(@"D:\Bureau"));
             Console.ReadLine();
         }
 
