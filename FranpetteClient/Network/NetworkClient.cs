@@ -198,7 +198,6 @@ namespace FranpetteClient.Network
         {
             if (_daemon == null || _daemon.isDone || _udpClient == null || _client.CurrentUser == null)
                 return;
-            FranpetteDaemon._semaphore.WaitOne();
             sendMessage(ERequestPacket.APPLICATION_GETHEADER.ToString() + SEPARATOR + _client.CurrentUser.Id + SEPARATOR + application.Id);
             FranpetteDaemon._semaphore.WaitOne();
             String localStream = Json.GetStream(localPath);

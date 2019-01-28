@@ -17,26 +17,28 @@ namespace UnitTests
 {
     class Program
     {
-        public char SEPARATOR = ':';
+        static public char SEPARATOR = ':';
 
         static void Main(string[] args)
         {
             //FClient client = XMLSerialisation.Serialise("franpette.xml");
-
+            deshtros();
             Console.ReadLine();
         }
 
-        void deshtros()
+        static void deshtros()
         {
             NetworkClient nclient = new NetworkClient();
 
             FClient client = nclient.Connect("82.243.249.234", 4245);
             nclient.Login("plop", "totito");
+            nclient.DowloadApplication(new FApplication() { Id = 2 }, "D:\\Projet\\Hesothread\\ranpetteWPF\\AppTest");
+            Console.WriteLine("End");
         }
 
-        UdpClient _udpClient;
+        static UdpClient _udpClient;
 
-        void manustrozor()
+        static void manustrozor()
         {
             int port = 4245;
             String address = "86.238.58.47";
@@ -58,12 +60,11 @@ namespace UnitTests
             sendMessage(EResponsePacket.AUTH_CONNECT.ToString() + SEPARATOR + 42);
             Console.ReadLine();
             Console.WriteLine("Send msg 3");
-            sendMessage(EResponsePacket.APPLICTION_HEADER.ToString() + SEPARATOR + /*JSON*/);
             Console.ReadLine();
         }
 
 
-        private void sendMessage(String message)
+        static private void sendMessage(String message)
         {
             Byte[] sendBytes = Encoding.ASCII.GetBytes(message);
             try

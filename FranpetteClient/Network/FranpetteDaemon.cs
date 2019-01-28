@@ -31,7 +31,7 @@ namespace FranpetteClient.Network
                 return false;
             _fdispatcher = Dispatcher.CurrentDispatcher;
             _client = client;
-            _semaphore = new Semaphore(1,1);
+            _semaphore = new Semaphore(0,1);
             Task.Factory.StartNew(() => FDaemon(client, udpClient));
             _done = false;
             return true;
