@@ -24,7 +24,7 @@ namespace FranpetteClient.FranpetteWindow.HomeControls.CenterServerList
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _serverIcon = "/Ressources/minecraft.jpg";
+        private string _serverIcon;
         public string ServerIcon
         {
             get { return _serverIcon; }
@@ -79,15 +79,10 @@ namespace FranpetteClient.FranpetteWindow.HomeControls.CenterServerList
             }
         }
 
-        public CServer(bool started = false, string name = "Inconnu", string user = "Inconnu", string ip = "Inconnu")
+        public CServer()
         {
             InitializeComponent();
             DataContext = this;
-
-            _isStarted = started;
-            _serverName = name;
-            _startedUserName = user;
-            _startedIp = ip;
         }
 
         protected void OnPropertyChanged(string name)

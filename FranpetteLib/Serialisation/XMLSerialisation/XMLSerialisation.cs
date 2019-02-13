@@ -8,7 +8,7 @@ namespace FranpetteLib.Serialisation.XMLSerialisation
 {
     public class XMLSerialisation
     {
-        public void Deserialise(FClient client, String path)
+        public static void Deserialise(FClient client, String path)
         {
             if (client == null)
                 return;

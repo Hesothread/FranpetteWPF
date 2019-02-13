@@ -19,7 +19,7 @@
                 <DataGridTemplateColumn Header="Mes partages" Width="*" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate >
                         <DataTemplate>
-                            <UserControl Content="{Binding}"/>
+                            <Local:CServer Content="{Binding}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

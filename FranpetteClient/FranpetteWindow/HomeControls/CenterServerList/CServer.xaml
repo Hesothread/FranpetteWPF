@@ -27,7 +27,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Grid.RowSpan="3" Source="/Ressources/minecraft.jpg"/>
+        <Image Grid.RowSpan="3" />
 
         <TextBlock Style="{StaticResource ServerInfo}" Grid.Row="0" Grid.Column="1" Text="{Binding ServerName}" FontSize="14" FontWeight="Bold"/>
         <TextBlock Style="{StaticResource ServerInfo}" Grid.Row="1" Grid.Column="1" Text="{Binding StartedUserName}"/>

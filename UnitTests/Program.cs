@@ -30,7 +30,7 @@ namespace UnitTests
         {
             NetworkClient nclient = new NetworkClient();
 
-            FClient client = nclient.Connect("82.243.249.234", 4245);
+            FClient client = nclient.Connect("localhost", 4242);
             nclient.Login("plop", "totito");
             nclient.DowloadApplication(new FApplication() { Id = 2 }, "D:\\Projet\\Hesothread\\ranpetteWPF\\AppTest");
             Console.WriteLine("End");
