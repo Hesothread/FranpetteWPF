@@ -23,14 +23,18 @@ namespace FranpetteClient.FranpetteWindow.HomeControls
     /// </summary>
     public partial class Home : UserControl
     {
+        //private NetworkClient _server;
+
         private HomeDataContext _homeContext;
 
-        public Home()
+        /*public Home(NetworkClient server)
         {
-            InitializeComponent();
+            _server = server;
+
             _homeContext = new HomeDataContext();
-            DataContext = _homeContext;
-        }
+            InitializeComponent();
+            this.Root_HomeGrid.DataContext = _homeContext;
+        }*/
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {

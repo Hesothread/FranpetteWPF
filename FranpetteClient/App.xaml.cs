@@ -16,4 +16,5 @@ namespace FranpetteClient
     public partial class App : Application
     {
     }
+    
 }

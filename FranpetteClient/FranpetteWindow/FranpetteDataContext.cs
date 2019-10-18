@@ -6,7 +6,7 @@ namespace FranpetteClient.FranpetteWindow
     public class FranpetteDataContext : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
+        
         private UserControl _mainWindow;
         public UserControl MainWindow
         {

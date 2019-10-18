@@ -24,27 +24,34 @@ namespace FranpetteClient.FranpetteWindow
     {
         private FranpetteDataContext _franpetteContext =  new FranpetteDataContext();
 
+        //private FClient _client;
+        //private NetworkClient _server;
+
         private Login _login;
         private Home _home;
 
         public Franpette()
         {
+            //_client = XMLSerialisation.Serialise("FranpetteUser.conf");
+
             InitializeComponent();
-            DataContext = _franpetteContext;
+            this.Root_Franpette.DataContext = _franpetteContext;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            _login = new Login();
-            _login.MyPersonalizedUCEvent += OnLoginAccepted;
+            //_server = new NetworkClient(_client);
+
+            //_login = new Login(_server);
+
+            _login.OnConnected += OnLoginAccepted;
             _franpetteContext.MainWindow = _login;
         }
-
 
         //EventHandler
         private void OnLoginAccepted()
         {
-            _home = new Home();
+            //_home = new Home(_server);
             _franpetteContext.MainWindow = _home;
         }
     }

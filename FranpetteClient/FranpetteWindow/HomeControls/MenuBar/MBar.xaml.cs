@@ -39,34 +39,17 @@ namespace FranpetteClient.FranpetteWindow.HomeControls.MenuBar
             if (NewsUCEvent != null) NewsUCEvent.Invoke();
         }
 
-        private void NewsBtn_Click(object sender, RoutedEventArgs e)
+        public void OpenFriends()
         {
-            if (NewsUCEvent != null) NewsUCEvent.Invoke();
+            if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
         }
-
-        public void GoToServerList()
-        {
-            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
-        }
-
-        private void ServerListBtn_Click(object sender, RoutedEventArgs e)
-        {
-            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
-        }
-
         public void GoToOptions()
         {
             if (OptionsUCEvent != null) OptionsUCEvent.Invoke();
         }
-
-        private void OptionsBtn_Click(object sender, RoutedEventArgs e)
+        public void GoToServerList()
         {
-            if (OptionsUCEvent != null) OptionsUCEvent.Invoke();
-        }
-
-        public void OpenFriends()
-        {
-            if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
+            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
         }
 
         private void FriendsBtn_Click(object sender, RoutedEventArgs e)
@@ -79,6 +62,18 @@ namespace FranpetteClient.FranpetteWindow.HomeControls.MenuBar
                 FriendsBtn.Content = "🞀 Amis";
 
             if (FriendsUCEvent != null) FriendsUCEvent.Invoke();
+        }
+        private void NewsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (NewsUCEvent != null) NewsUCEvent.Invoke();
+        }
+        private void ServerListBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (ServerListUCEvent != null) ServerListUCEvent.Invoke();
+        }
+        private void OptionsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (OptionsUCEvent != null) OptionsUCEvent.Invoke();
         }
     }
 }

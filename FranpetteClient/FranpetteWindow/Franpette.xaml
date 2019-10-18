@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FranpetteClient"
         mc:Ignorable="d" Height="800" Width="800" Title="Franpette" WindowStartupLocation="CenterScreen" Icon="../franpette.ico">
-    <Grid>
+    <Grid x:Name="Root_Franpette">
         <UserControl Name="UCMain" Content="{Binding MainWindow}"/>
     </Grid>
 </Window>

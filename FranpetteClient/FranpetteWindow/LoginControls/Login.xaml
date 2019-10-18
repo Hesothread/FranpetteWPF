@@ -27,7 +27,7 @@
             <Setter Property="Margin" Value="0,0,10,0"/>
         </Style>
     </UserControl.Resources>
-    <Grid Name="LoginGrid" Background="{StaticResource DarkGray}">
+    <Grid Name="Root_LoginGrid" Background="{StaticResource DarkGray}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
@@ -49,18 +49,18 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Grid.ColumnSpan="4" Fill="{StaticResource Black}" Height="30"/>
 
-        <Image Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Source="FranpetteClient/Ressources/Image/franpette-logo.png"/>
+        <Image Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Source="pack://application:,,,/FranpetteClient;component/Ressources/Image/franpette-logo.png"/>
 
-        <Image Style="{StaticResource Icon}" Grid.Row="4" Grid.Column="1" Source="FranpetteClient/Ressources/Image/user.png"/>
-        <Image Style="{StaticResource Icon}" Grid.Row="5" Grid.Column="1" Source="FranpetteClient/Ressources/Image/password.png"/>
-        <Image Style="{StaticResource Icon}" Grid.Row="6" Grid.Column="1" Source="FranpetteClient/Ressources/Image/server.png"/>
+        <Image Style="{StaticResource Icon}" Grid.Row="4" Grid.Column="1" Source="pack://application:,,,/FranpetteClient;component/Ressources/Image/user.png"/>
+        <Image Style="{StaticResource Icon}" Grid.Row="5" Grid.Column="1" Source="pack://application:,,,/FranpetteClient;component/Ressources/Image/password.png"/>
+        <Image Style="{StaticResource Icon}" Grid.Row="6" Grid.Column="1" Source="pack://application:,,,/FranpetteClient;component/Ressources/Image/server.png"/>
         
-        <TextBox Style="{StaticResource Field}" Grid.Row="4" Grid.Column="2" Text="{StaticResource lang_username}"/>
-        <PasswordBox Style="{StaticResource Field}" Grid.Row="5" Grid.Column="2" x:Name="UserPassword" AutomationProperties.HelpText="ggsdfgs"/>
-        <TextBox Style="{StaticResource Field}" Grid.Row="6" Grid.Column="2" Text="{StaticResource lang_server_ip_or_domaine}"/>
+        <TextBox Style="{StaticResource Field}" Grid.Row="4" Grid.Column="2" Text="{Binding UserName}"/>
+        <PasswordBox Style="{StaticResource Field}" Grid.Row="5" Grid.Column="2" x:Name="UserPassword" AutomationProperties.HelpText="___Mes Couille___"/>
+        <TextBox Style="{StaticResource Field}" Grid.Row="6" Grid.Column="2" Text="{Binding Address}"/>
 
         <CheckBox Style="{StaticResource Field}" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Content="{StaticResource lang_remember}" Margin="0,20,0,0" BorderThickness="1"/>
-        <Button Style="{StaticResource Login}" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Content="{StaticResource lang_login_in}" Click="Button_Click"/>
+        <Button Style="{StaticResource Login}" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Content="{StaticResource lang_login_in}" Click="ButtonConnection_Click"/>
 
         <Rectangle Grid.Row="10" Grid.ColumnSpan="4" Fill="{StaticResource Black}" Height="30"/>
     </Grid>
