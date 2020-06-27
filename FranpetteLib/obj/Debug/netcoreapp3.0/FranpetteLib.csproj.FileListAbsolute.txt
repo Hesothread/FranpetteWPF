@@ -1,0 +1,9 @@
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\bin\Debug\netcoreapp3.0\FranpetteLib.deps.json
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\bin\Debug\netcoreapp3.0\FranpetteLib.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\bin\Debug\netcoreapp3.0\FranpetteLib.pdb
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.csprojAssemblyReference.cache
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.AssemblyInfoInputs.cache
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.AssemblyInfo.cs
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.pdb
+C:\Data\Project\Hesothread\FranpetteWPF\FranpetteLib\obj\Debug\netcoreapp3.0\FranpetteLib.csproj.CoreCompileInputs.cache

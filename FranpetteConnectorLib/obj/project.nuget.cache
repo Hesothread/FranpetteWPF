@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "A8myRHi47v+z/oXrmFP2i5Js9qSi/HvMAU8SCoHZqLyZXG6fgb1cc+6jOXP19ltejQKNTDrbivGjfR8RrHim+g==",
+  "success": true,
+  "projectFilePath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteConnectorLib\\FranpetteConnectorLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\desht\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\desht\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\desht\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

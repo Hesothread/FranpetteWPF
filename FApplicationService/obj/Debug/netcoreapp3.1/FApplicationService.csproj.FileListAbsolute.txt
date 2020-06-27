@@ -1,0 +1,14 @@
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FranpetteLib.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FranpetteService.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FranpetteLib.pdb
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.csprojAssemblyReference.cache
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.AssemblyInfoInputs.cache
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.AssemblyInfo.cs
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FApplicationService.deps.json
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FApplicationService.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FApplicationService.pdb
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\bin\Debug\netcoreapp3.1\FranpetteService.pdb
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.csproj.CoreCompileInputs.cache
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.csproj.CopyComplete
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.dll
+C:\Data\Project\Hesothread\FranpetteWPF\FApplicationService\obj\Debug\netcoreapp3.1\FApplicationService.pdb
