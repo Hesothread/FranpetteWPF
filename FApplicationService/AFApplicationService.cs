@@ -1,8 +1,6 @@
 ﻿using FranpetteLib.Dto.FApplicationDto.Request;
 using FranpetteLib.Dto.FApplicationDto.Response;
 using FranpetteLib.Result;
-using FranpetteServer.Services;
-using FranpetteServer.Services.FApplicationService;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
