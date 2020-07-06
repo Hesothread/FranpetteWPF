@@ -7,46 +7,22 @@ using System.Threading.Tasks;
 
 namespace FranpetteServer.Services.FApplicationService
 {
-    public class AFApplicationService : AFranpetteService, IFApplicationService
+    public abstract class AFApplicationService : AFranpetteService, IFApplicationService
     {
-        public Task<Result> CreateApplicationRepository(Request_FApplicationCreateDto request)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Result> CreateApplicationRepository(Request_FApplicationCreateDto request);
 
-        public Task<IFormFile> DownlaodApplication(string applicationId)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<IFormFile> DownlaodApplication(string applicationId);
 
-        public Task<IEnumerable<Response_FApplicationGetInfoDto>> GetAllApplicationsInfo()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<IEnumerable<Response_FApplicationGetInfoDto>> GetAllApplicationsInfo();
 
-        public Task<Response_FApplicationGetHashFileDto> GetApplicationHashFile(string applicationId)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Response_FApplicationGetHashFileDto> GetApplicationHashFile(string applicationId);
 
-        public Task<Response_FApplicationGetInfoDto> GetApplicationInfo(string applicationId)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Response_FApplicationGetInfoDto> GetApplicationInfo(string applicationId);
 
-        public Task<Result> StartApplication(string applicationId, Request_FApplicationStartDto request)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Result> StartApplication(string applicationId, Request_FApplicationStartDto request);
 
-        public Task<Result> StopApplication(string applicationId, Request_FApplicationStopDto request)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Result> StopApplication(string applicationId, Request_FApplicationStopDto request);
 
-        public Task<Result> UploadApplication(string applicationId, IFormFile file)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract Task<Result> UploadApplication(string applicationId, IFormFile file);
     }
 }

@@ -1,35 +1,51 @@
-﻿using System;
+﻿using FranpetteLib.Dto.FApplicationDto.Request;
+using FranpetteLib.Dto.FApplicationDto.Response;
+using FranpetteLib.Result;
+using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using FranpetteServer.Services.FApplicationService.Models;
 
 namespace FranpetteServer.Services.FApplicationService
 {
-    public class FApplicationService : AService, IFApplicationService
+    public class FApplicationService : AFApplicationService, IFApplicationService
     {
-        private readonly AirplaneContext _context;
-        public override void Dispose()
+        public Task<Result> CreateApplicationRepository(Request_FApplicationCreateDto request)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<FApplication> GetAllApplications()
+        public Task<IFormFile> DownlaodApplication(string applicationId)
         {
             throw new NotImplementedException();
         }
 
-        public FApplication GetApplication(string applicationId)
+        public Task<IEnumerable<Response_FApplicationGetInfoDto>> GetAllApplicationsInfo()
         {
             throw new NotImplementedException();
         }
 
-        public bool StartApplication(string applicationId, string userId)
+        public Task<Response_FApplicationGetHashFileDto> GetApplicationHashFile(string applicationId)
         {
             throw new NotImplementedException();
         }
 
-        public bool StopApplication(string applicationId, string userId)
+        public Task<Response_FApplicationGetInfoDto> GetApplicationInfo(string applicationId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Result> StartApplication(string applicationId, Request_FApplicationStartDto request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Result> StopApplication(string applicationId, Request_FApplicationStopDto request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Result> UploadApplication(string applicationId, IFormFile file)
         {
             throw new NotImplementedException();
         }

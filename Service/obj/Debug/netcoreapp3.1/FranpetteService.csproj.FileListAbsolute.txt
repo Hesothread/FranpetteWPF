@@ -6,4 +6,3 @@ C:\Data\Project\Hesothread\FranpetteWPF\Service\obj\Debug\netcoreapp3.1\Franpett
 C:\Data\Project\Hesothread\FranpetteWPF\Service\obj\Debug\netcoreapp3.1\FranpetteService.AssemblyInfo.cs
 C:\Data\Project\Hesothread\FranpetteWPF\Service\obj\Debug\netcoreapp3.1\FranpetteService.dll
 C:\Data\Project\Hesothread\FranpetteWPF\Service\obj\Debug\netcoreapp3.1\FranpetteService.pdb
-C:\Data\Project\Hesothread\FranpetteWPF\Service\obj\Debug\netcoreapp3.1\FranpetteService.csprojAssemblyReference.cache
