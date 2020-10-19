@@ -10,15 +10,14 @@
         "projectUniqueName": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationServiceNoSession\\FApplicationServiceNoSession.csproj",
         "projectName": "FApplicationServiceNoSession",
         "projectPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationServiceNoSession\\FApplicationServiceNoSession.csproj",
-        "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MarcAlexandre\\.nuget\\packages\\",
         "outputPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationServiceNoSession\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarcAlexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -27,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/biodiv-wind/_packaging/biodiv-wind_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -64,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -74,15 +74,14 @@
         "projectUniqueName": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationService\\FApplicationService.csproj",
         "projectName": "FApplicationService",
         "projectPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationService\\FApplicationService.csproj",
-        "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MarcAlexandre\\.nuget\\packages\\",
         "outputPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FApplicationService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarcAlexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -91,7 +90,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/biodiv-wind/_packaging/biodiv-wind_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -144,15 +144,14 @@
         "projectUniqueName": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj",
         "projectName": "FranpetteLib",
         "projectPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteLib\\FranpetteLib.csproj",
-        "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MarcAlexandre\\.nuget\\packages\\",
         "outputPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarcAlexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -161,7 +160,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/biodiv-wind/_packaging/biodiv-wind_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
@@ -186,12 +186,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -201,15 +215,14 @@
         "projectUniqueName": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
         "projectName": "FranpetteServer",
         "projectPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteServer\\FranpetteServer.csproj",
-        "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MarcAlexandre\\.nuget\\packages\\",
         "outputPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarcAlexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -218,7 +231,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/biodiv-wind/_packaging/biodiv-wind_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -282,7 +296,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -292,15 +306,14 @@
         "projectUniqueName": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\Service\\FranpetteService.csproj",
         "projectName": "FranpetteService",
         "projectPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\Service\\FranpetteService.csproj",
-        "packagesPath": "C:\\Users\\desht\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MarcAlexandre\\.nuget\\packages\\",
         "outputPath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\desht\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarcAlexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -309,7 +322,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/biodiv-wind/_packaging/biodiv-wind_feed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -339,7 +353,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

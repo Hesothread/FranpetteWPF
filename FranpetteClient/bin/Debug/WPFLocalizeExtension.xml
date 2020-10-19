@@ -128,15 +128,15 @@
             </summary>
         </member>
         <member name="F:WPFLocalizeExtension.Engine.GapTextControl.IgnoreLessGapsProperty">
-            <summary>
-            If this property is set to true there is no error thrown 
-            when the FormatString contains less gaps than placeholders are available.
-            Missing placeholders for available elements may be a problem, 
-            as something else may refer to the element in a binding e.g. by name, 
-            but the element is not available in the visual tree.
+             <summary>
+             If this property is set to true there is no error thrown
+             when the FormatString contains less gaps than placeholders are available.
+             Missing placeholders for available elements may be a problem,
+             as something else may refer to the element in a binding e.g. by name,
+             but the element is not available in the visual tree.
             
-            As an example consider a submit button would be missing due to a missing placeholder in the FormatString.
-            </summary>
+             As an example consider a submit button would be missing due to a missing placeholder in the FormatString.
+             </summary>
         </member>
         <member name="F:WPFLocalizeExtension.Engine.GapTextControl.IgnoreDuplicateStringReferencesProperty">
             <summary>
@@ -151,7 +151,7 @@
         <member name="F:WPFLocalizeExtension.Engine.GapTextControl.GapsProperty">
             <summary>
             property that stores the items to be inserted into the gaps.
-            any item that can be inserted as such into the TextBox get's inserted itself. 
+            any item that can be inserted as such into the TextBox get's inserted itself.
             All other items are converted to Text using their ToString() implementation.
             </summary>
         </member>
@@ -558,7 +558,7 @@
             On set, <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary.DictionaryEvent"/> is raised.
             </summary>
             <exception cref="T:System.InvalidOperationException">
-            You have to set <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary"/>.Culture first or 
+            You have to set <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary"/>.Culture first or
             wait until System.Windows.Application.Current.MainWindow is created.
             Otherwise you will get an Exception.</exception>
             <exception cref="T:System.ArgumentNullException">thrown if Culture will be set to null</exception>
@@ -607,7 +607,7 @@
             <summary>
             Gets the specific <see cref="T:System.Globalization.CultureInfo"/> of the current culture.
             This can be used for format manners.
-            If the Culture is an invariant <see cref="T:System.Globalization.CultureInfo"/>, 
+            If the Culture is an invariant <see cref="T:System.Globalization.CultureInfo"/>,
             SpecificCulture will also return an invariant <see cref="T:System.Globalization.CultureInfo"/>.
             </summary>
         </member>
@@ -659,7 +659,7 @@
         </member>
         <member name="M:WPFLocalizeExtension.Engine.LocalizeDictionary.ResourceKeyExists(System.String,System.String,System.String)">
             <summary>
-            Looks up the ResourceManagers for the searched <paramref name="resourceKey"/> 
+            Looks up the ResourceManagers for the searched <paramref name="resourceKey"/>
             in the <paramref name="resourceDictionary"/> in the <paramref name="resourceAssembly"/>
             with an Invariant Culture.
             </summary>
@@ -765,7 +765,7 @@
         </member>
         <member name="M:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand.#ctor(System.Action{System.Globalization.CultureInfo})">
             <summary>
-            Initializes a new instance of the <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand"/> class. 
+            Initializes a new instance of the <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand"/> class.
             Creates a new command that can always execute.
             </summary>
             <param name="execute">
@@ -774,7 +774,7 @@
         </member>
         <member name="M:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand.#ctor(System.Action{System.Globalization.CultureInfo},System.Predicate{System.Globalization.CultureInfo})">
             <summary>
-            Initializes a new instance of the <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand"/> class. 
+            Initializes a new instance of the <see cref="T:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand"/> class.
             Creates a new command.
             </summary>
             <param name="execute">
@@ -786,7 +786,7 @@
         </member>
         <member name="E:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand.CanExecuteChanged">
             <summary>
-            Occurs when changes occur that affect whether or not the command should execute. 
+            Occurs when changes occur that affect whether or not the command should execute.
             </summary>
         </member>
         <member name="M:WPFLocalizeExtension.Engine.LocalizeDictionary.CultureInfoDelegateCommand.CanExecute(System.Object)">
@@ -905,6 +905,11 @@
             A flag indicating that a reload should be performed.
             </summary>
         </member>
+        <member name="P:WPFLocalizeExtension.Engine.MissingKeyEventArgs.MissingKeyResult">
+            <summary>
+            A custom returnmessage for the missing key
+            </summary>
+        </member>
         <member name="M:WPFLocalizeExtension.Engine.MissingKeyEventArgs.#ctor(System.String)">
             <summary>
             Creates a new instance of <see cref="T:WPFLocalizeExtension.Engine.MissingKeyEventArgs"/>.
@@ -923,8 +928,8 @@
         </member>
         <member name="M:WPFLocalizeExtension.Engine.ObjectDependencyManager.#cctor">
             <summary>
-            Initializes static members of the <see cref="T:WPFLocalizeExtension.Engine.ObjectDependencyManager"/> class. 
-            Static Constructor. Creates a new instance of 
+            Initializes static members of the <see cref="T:WPFLocalizeExtension.Engine.ObjectDependencyManager"/> class.
+            Static Constructor. Creates a new instance of
             Dictionary(object, <see cref="T:System.WeakReference"/>) and set it to the <see cref="F:WPFLocalizeExtension.Engine.ObjectDependencyManager.InternalList"/>.
             </summary>
         </member>
@@ -1010,37 +1015,6 @@
             </summary>
             <param name="targetInfo">The target information.</param>
             <returns>A new instance with safe references.</returns>
-        </member>
-        <member name="T:WPFLocalizeExtension.Engine.TypedWeakReference`1">
-            <summary>
-            A types version of <see cref="T:System.WeakReference"/>.
-            </summary>
-            <typeparam name="T">The reference type.</typeparam>
-        </member>
-        <member name="M:WPFLocalizeExtension.Engine.TypedWeakReference`1.#ctor(`0)">
-            <summary>
-            Creates a new instance.
-            </summary>
-            <param name="target">The target.</param>
-        </member>
-        <member name="M:WPFLocalizeExtension.Engine.TypedWeakReference`1.#ctor(`0,System.Boolean)">
-            <summary>
-            Creates a new instance.
-            </summary>
-            <param name="target">The target.</param>
-            <param name="trackResurrection">The track resurrection flag.</param>
-        </member>
-        <member name="M:WPFLocalizeExtension.Engine.TypedWeakReference`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Creates a new instance.
-            </summary>
-            <param name="info">The serialization info.</param>
-            <param name="context">The streaming context.</param>
-        </member>
-        <member name="P:WPFLocalizeExtension.Engine.TypedWeakReference`1.Target">
-            <summary>
-            Gets or sets the target.
-            </summary>
         </member>
         <member name="T:WPFLocalizeExtension.Extensions.BLoc">
             <summary>
@@ -1138,7 +1112,7 @@
         </member>
         <member name="T:WPFLocalizeExtension.Extensions.LocTextExtension.TextAppendType">
             <summary>
-            This enumeration is used to determine the type 
+            This enumeration is used to determine the type
             of the return value of <see cref="M:WPFLocalizeExtension.Extensions.LocTextExtension.GetAppendText(WPFLocalizeExtension.Extensions.LocTextExtension.TextAppendType)"/>
             </summary>
         </member>

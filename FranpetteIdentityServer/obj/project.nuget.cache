@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dNdzqwgvT/FiNWISf0QdxEI1r2A6UTUu1Dva6DxpFUckh0lm5cpX5s5qjzH6U/LhhUl88KVdoA7hHyUvwVqtFg==",
+  "dgSpecHash": "sa/KOlp7YNeY9QtfqRvqwUm8MzUkknPuqMwJP9zDB/AnyqZ2m3NkqY+lOIUbKMJA67+A0wDUeL+QYiackSpuaQ==",
   "success": true,
   "projectFilePath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteIdentityServer\\FranpetteIdentityServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

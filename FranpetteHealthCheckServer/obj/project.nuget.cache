@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OVDW1y6H/aynu7MJ6tor0quupKYI5TiswuBFeHVkq5/6huKrBGGaQwMgkxh1VFAM4WJqWlu4GpjDrfSJwENToQ==",
+  "dgSpecHash": "EhF8lUKE0FmF8XzLGifH2x4RQPx17gm7JsnJ04yBE6leF5kayRrQqXkijOlhedRLlcofF0lEY65Wb9sLa5TdAA==",
   "success": true,
   "projectFilePath": "C:\\Data\\Project\\Hesothread\\FranpetteWPF\\FranpetteHealthCheckServer\\FranpetteHealthCheckServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\MarcAlexandre\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

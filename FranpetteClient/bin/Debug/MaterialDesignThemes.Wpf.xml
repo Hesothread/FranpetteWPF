@@ -41,7 +41,7 @@
         </member>
         <member name="T:MaterialDesignThemes.Wpf.ColorZone">
             <summary>
-            User a colour zone to easily switch the background and foreground colours, whilst still remaining within the selected Material Design palette.
+            User a colour zone to easily switch the background and foreground colours, from selected Material Design palette or custom ones.
             </summary>
         </member>
         <member name="F:MaterialDesignThemes.Wpf.ComboBoxAssist.ClassicModeProperty">
@@ -441,6 +441,11 @@
             Client code cannot set this directly, this is internally managed.  To end the dialog session use <see cref="M:MaterialDesignThemes.Wpf.DialogSession.Close"/>.
             </remarks>
         </member>
+        <member name="P:MaterialDesignThemes.Wpf.DialogSession.CloseParameter">
+            <summary>
+            The parameter passed to the <see cref="F:MaterialDesignThemes.Wpf.DialogHost.CloseDialogCommand" /> and return by <see cref="M:MaterialDesignThemes.Wpf.DialogHost.Show(System.Object)"/>
+            </summary>
+        </member>
         <member name="P:MaterialDesignThemes.Wpf.DialogSession.Content">
             <summary>
             Gets the <see cref="P:MaterialDesignThemes.Wpf.DialogHost.DialogContent"/> which is currently displayed, so this could be a view model or a UI element.
@@ -555,8 +560,8 @@
             Displays an icon image/path, according to the specified <see cref="P:MaterialDesignThemes.Wpf.Icon.Type"/> name.
             </summary>
             <remarks>
-            All icons sourced from Material Design Icons Font - <see cref="!:https://materialdesignicons.com/"/> - in accordance of 
-            <see cref="!:https://github.com/Templarian/MaterialDesign/blob/master/license.txt"/>.
+            All icons sourced from Material Design Icons Font - https://materialdesignicons.com/ - in accordance of 
+            https://github.com/Templarian/MaterialDesign/blob/master/LICENSE.
             </remarks>
         </member>
         <member name="P:MaterialDesignThemes.Wpf.Icon.Type">
@@ -569,8 +574,8 @@
             List of available icons for use with <see cref="T:MaterialDesignThemes.Wpf.Icon"/>.
             </summary>
             <remarks>
-            All icons sourced from Material Design Icons Font - <see cref="!:https://materialdesignicons.com/"/> - in accordance of 
-            <see cref="!:https://github.com/Templarian/MaterialDesign/blob/master/license.txt"/>.
+            All icons sourced from Material Design Icons Font - https://materialdesignicons.com/ - in accordance of 
+            https://github.com/Templarian/MaterialDesign/blob/master/LICENSE.
             </remarks>
         </member>
         <member name="T:MaterialDesignThemes.Wpf.IHintProxy">
@@ -695,8 +700,8 @@
             List of available icons for use with <see cref="T:MaterialDesignThemes.Wpf.PackIcon" />.
             </summary>
             <remarks>
-            All icons sourced from Material Design Icons Font - <see cref="!:https://materialdesignicons.com/"/> - in accordance of 
-            <see cref="!:https://github.com/Templarian/MaterialDesign/blob/master/license.txt"/>.
+            All icons sourced from Material Design Icons Font - https://materialdesignicons.com/ - in accordance of 
+            https://github.com/Templarian/MaterialDesign/blob/master/LICENSE.
             </remarks>
         </member>
         <member name="T:MaterialDesignThemes.Wpf.Palette">
@@ -1243,9 +1248,27 @@
             <param name="element"></param>
             <returns></returns>
         </member>
+        <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.UnderlineBrushProperty">
+            <summary>
+            The attached WPF property for getting or setting the <see cref="T:System.Windows.Media.Brush"/> value for an underline decoration.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignThemes.Wpf.TextFieldAssist.SetUnderlineBrush(System.Windows.DependencyObject,System.Windows.Media.Brush)">
+            <summary>
+            Sets the <see cref="T:System.Windows.Media.Brush"/> used for underline decoration.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MaterialDesignThemes.Wpf.TextFieldAssist.GetUnderlineBrush(System.Windows.DependencyObject)">
+            <summary>
+            Gets the <see cref="T:System.Windows.Media.Brush"/> used for underline decoration.
+            </summary>
+            <param name="element"></param>
+        </member>
         <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.HasFilledTextFieldProperty">
             <summary>
-            Controls the visibility of the filled text field.
+            Controls the visbility of the text field box.
             </summary>
         </member>
         <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.HasOutlinedTextFieldProperty">
@@ -1271,21 +1294,6 @@
         <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.RippleOnFocusEnabledProperty">
             <summary>
             Enables a ripple effect on focusing the text box.
-            </summary>
-        </member>
-        <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.UnderlineBrushProperty">
-            <summary>
-            The color for highlighting effects on the border of a text box.
-            </summary>
-        </member>
-        <member name="M:MaterialDesignThemes.Wpf.TextFieldAssist.SetUnderlineBrush(System.Windows.DependencyObject,System.Windows.Media.Brush)">
-            <summary>
-            Sets the color for highlighting effects on the border of a text box.
-            </summary>
-        </member>
-        <member name="M:MaterialDesignThemes.Wpf.TextFieldAssist.GetUnderlineBrush(System.Windows.DependencyObject)">
-            <summary>
-            Gets the color for highlighting effects on the border of a text box.
             </summary>
         </member>
         <member name="F:MaterialDesignThemes.Wpf.TextFieldAssist.IncludeSpellingSuggestionsProperty">
